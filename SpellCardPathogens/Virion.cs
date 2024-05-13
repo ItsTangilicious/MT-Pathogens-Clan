@@ -6,6 +6,8 @@ using System.Text;
 using Trainworks.BuildersV2;
 using Trainworks.Constants;
 using Test_Bounce;
+using MonsterCardPathogens;
+using Trainworks.Managers;
 
 
 namespace SpellCardPathogens
@@ -13,7 +15,7 @@ namespace SpellCardPathogens
     internal class Virion
     {
         public static readonly string ID = Rats.GUID + "_Virion";
-
+       
         public static void BuildAndRegister()
         {
             var effect = new CardEffectDataBuilder
@@ -36,7 +38,12 @@ namespace SpellCardPathogens
                 AssetPath = "AssetsAll/SpellAssets/VirionSpell.png",
                 CardPoolIDs = { VanillaCardPoolIDs.MegaPool },
                 EffectBuilders =
+               
                 {
+                     new CardEffectDataBuilder
+                     {
+                         EffectStateType = typeof(CardEffectLoadRecombinantArt)
+                     },
                     effect
                 },
 

@@ -34,6 +34,10 @@ namespace SpellCardPathogens
                 EffectBuilders =
                 {
                     new CardEffectDataBuilder
+                     {
+                         EffectStateType = typeof(CardEffectLoadRecombinantArt)
+                     },
+                    new CardEffectDataBuilder
                     {
                         EffectStateType = typeof(CardEffectAdjustRoomCapacity),
                         TargetTeamType = Team.Type.None,

@@ -35,6 +35,10 @@ namespace SpellCardPathogens
                 CardPoolIDs = { VanillaCardPoolIDs.MegaPool },
                 EffectBuilders =
                 {
+                    new CardEffectDataBuilder
+                     {
+                         EffectStateType = typeof(CardEffectLoadRecombinantArt)
+                     },
                     effect, effect, effect
                 },
 
