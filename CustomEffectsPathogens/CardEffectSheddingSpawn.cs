@@ -53,6 +53,7 @@ namespace CustomEffectsPathogens
             int spawnIndex2 = fromMonsterSpawnPoint.GetIndexInRoom();
             int num = room.ShiftSpawnPoints(Team.Type.Monsters, spawnIndex2);
             spawnIndex2 = Mathf.Max(spawnIndex2 - num, 0);
+
             if (!saveManager.PreviewMode && num > 0)
             {
                 yield return cardEffectParams.roomManager.GetRoomUI().CenterCharacters(room, fromMonsterSpawnPoint != null, fromEndOfRoomCombat: false, forceRecenter: true);

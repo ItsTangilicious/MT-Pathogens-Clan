@@ -5,6 +5,7 @@ using System.Text;
 using Trainworks.Managers;
 using Trainworks.ConstantsV2;
 using MonsterCardPathogens;
+using ShinyShoe.Loading;
 
 
 namespace CustomEffectsPathogens 
@@ -26,6 +27,8 @@ namespace CustomEffectsPathogens
                 return false;
             }
         }
+
+        
         public override IEnumerator ApplyEffect(CardEffectState cardEffectState, CardEffectParams cardEffectParams)
         {
 
