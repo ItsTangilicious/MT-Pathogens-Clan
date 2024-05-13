@@ -67,6 +67,10 @@ namespace MonsterCardPathogens
                                         EffectBuilders = new List<CardEffectDataBuilder>
                                         {
                                             new CardEffectDataBuilder
+                     {
+                         EffectStateType = typeof(CardEffectLoadRecombinantArt)
+                     },
+                                            new CardEffectDataBuilder
                                                 {
                                                      EffectStateType = typeof(CardEffectRecruitsShedding),
                                                      TargetMode = TargetMode.Room,
@@ -84,7 +88,7 @@ namespace MonsterCardPathogens
                                 {
                                     TriggerID = TriggerID,
                                     Trigger = Trigger.OnHit,
-                                    Description = "Gain <b>Shard [effect0.status0.power]</b>. Then lose <b>Shard [effect1.power]</b> to summon 1 Recombinant Virus.",
+                                    Description = "Gain <b>Shard [effect0.status0.power]</b>. Then lose <b>Shard [effect2.power]</b> to summon 1 Recombinant Virus.",
                                     EffectBuilders =
                                     {
                                         new CardEffectDataBuilder
@@ -104,7 +108,10 @@ namespace MonsterCardPathogens
 
                                             }
                                         },
-
+                                        new CardEffectDataBuilder
+                     {
+                         EffectStateType = typeof(CardEffectLoadRecombinantArt)
+                     },
                                         new CardEffectDataBuilder
                                         {
                                             EffectStateType = typeof(CardEffectSheddingSpawn),
