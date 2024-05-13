@@ -10,6 +10,9 @@ using Trainworks.ConstantsV2;
 using Trainworks.Managers;
 using Trainworks.ManagersV2;
 using UnityEngine;
+using BepInEx.Logging;
+using JetBrains.Annotations;
+
 
 namespace HellPathogens.CardPools
 {
@@ -25,17 +28,24 @@ namespace HellPathogens.CardPools
         public static CardPool Resistance3C = ScriptableObject.CreateInstance<CardPool>();
         public static CardPool RefMegaPool = ScriptableObject.CreateInstance<CardPool>();
         public static CardPool RefAllBannersPool = ScriptableObject.CreateInstance<CardPool>();
-           
+
+
+        public static void MarkCardPoolForPreloading(CardPool cardPoolID, bool clan_assets = true, bool game_assets = false)
+        {
+            cardPoolID = RecombinantCardPool;
+        }
 
         public static void DoCardPoolStuff()
        {
+            
             BorreliaCardPool = new CardPoolBuilder
             {
                 CardPoolID = Rats.GUID + "_BorreliaCardPool",
                 CardIDs = new List<string>
                 {
                     CustomCardManager.GetCardDataByID(BorreliaDaemonium.ID).GetID()
-                }
+                },
+                
             }.BuildAndRegister();
 
            RecombinantCardPool = new CardPoolBuilder
@@ -44,8 +54,8 @@ namespace HellPathogens.CardPools
                 CardIDs = new List<string>
                 {
                     CustomCardManager.GetCardDataByID(RecombinantVirusMonster.ID).GetID()
-                }
-
+                },
+               
             }.BuildAndRegister();
 
             {

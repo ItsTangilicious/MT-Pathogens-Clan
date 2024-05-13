@@ -196,6 +196,10 @@ namespace HellbornPathogens.Champions
                         EffectBuilders = new List<CardEffectDataBuilder>
                         {
                             new CardEffectDataBuilder
+                     {
+                         EffectStateType = typeof(CardEffectLoadRecombinantArt)
+                     },
+                            new CardEffectDataBuilder
                             {
                                 EffectStateType = typeof(CardEffectRecruitsShedding),
                                 TargetMode = TargetMode.Room,
@@ -226,6 +230,10 @@ namespace HellbornPathogens.Champions
                         Trigger = CharacterTriggerData.Trigger.OnHit,
                         EffectBuilders = new List<CardEffectDataBuilder>
                         {
+                            new CardEffectDataBuilder
+                     {
+                         EffectStateType = typeof(CardEffectLoadRecombinantArt)
+                     },
                             new CardEffectDataBuilder
                             {
                                 EffectStateType = typeof(CardEffectRecruitsShedding),
@@ -271,6 +279,10 @@ namespace HellbornPathogens.Champions
                         Trigger = CharacterTriggerData.Trigger.OnHit,
                         EffectBuilders = new List<CardEffectDataBuilder>
                         {
+                           new CardEffectDataBuilder
+                     {
+                         EffectStateType = typeof(CardEffectLoadRecombinantArt)
+                     },
                             new CardEffectDataBuilder
                             {
                                 EffectStateType = typeof(CardEffectRecruitsShedding),
