@@ -8,7 +8,8 @@ using MonsterCardPathogens;
 
 
 namespace CustomEffectsPathogens
-    //Apr 22, 2024: currently spawns a cardless copy of unit from deck to the back of the room. Does not hit the discard pile.
+//Apr 22, 2024: currently spawns a cardless copy of unit from deck to the back of the room. Does not hit the discard pile.
+//May 13, 2024: sometimes it works, sometimes it does not??? I do not know why....
 {
     internal class CardEffectSpawnUnitFromDeck : CardEffectBase
     {
@@ -66,44 +67,53 @@ namespace CustomEffectsPathogens
         }*/
         public override bool TestEffect(CardEffectState cardEffectState, CardEffectParams cardEffectParams)
         {
+            toProcessCards.Clear();
+            toProcessCards.AddRange(cardEffectParams.cardManager.GetDrawPile());
+            toProcessCards.AddRange(cardEffectParams.cardManager.GetDiscardPile());
             RoomState selectedRoom = cardEffectParams.GetSelectedRoom();
             return !selectedRoom.GetIsPyreRoom() && selectedRoom.GetFirstEmptyMonsterPoint() != null;
         }
 
-    
+
 
         public override IEnumerator ApplyEffect(CardEffectState cardEffectState, CardEffectParams cardEffectParams)
         {
             RoomState roomState = cardEffectParams.GetSelectedRoom();
             RelicManager relicManager = cardEffectParams.relicManager;
 
-           //yield return cardEffectParams.roomManager.GetRoomUI().SetSelectedRoom(roomIndex);
-            toProcessCards.Clear();
-            toProcessCards.AddRange(cardEffectParams.cardManager.GetDrawPile());
-            toProcessCards.AddRange(cardEffectParams.cardManager.GetDiscardPile());
-            /*int num = 0;
+            //yield return cardEffectParams.roomManager.GetRoomUI().SetSelectedRoom(roomIndex);
+            //toProcessCards.Clear();
+            //toProcessCards.AddRange(cardEffectParams.cardManager.GetDrawPile());
+            //toProcessCards.AddRange(cardEffectParams.cardManager.GetDiscardPile());
+            int num =0;
             int intInRange = cardEffectState.GetIntInRange();
             for (int i = 0; i < toProcessCards.Count; i++)
             {
                 if (num >= intInRange)
                 {
                     break;
-                }*/
-                //toProcessCards.Shuffle(RngId.CardDraw);
-                CardState cardState = toProcessCards[0];
+                }
+                toProcessCards.Shuffle(RngId.CardDraw);
+                CardState cardState = toProcessCards[i];
+
+                //cardManager.SetCardIsDrawable(cardState, drawable: false);
+                //above line will make it crash
+
                 CharacterState characterState = null;
                 if (cardState != cardEffectParams.playedCard && cardState.GetCardType() == cardEffectState.GetTargetCardType())
                 {
+                   
                     yield return cardEffectParams.monsterManager.CreateMonsterState(cardState.GetSpawnCharacterData(), cardState, cardEffectParams.selectedRoom, delegate (CharacterState spawnedCharacter)
                     {
                         characterState = spawnedCharacter;
-                    }, SpawnMode.FrontSlot, roomState.GetMonsterPoint(0), null, false, null, null, false);
+                    }, SpawnMode.FrontSlot, roomState.GetMonsterPoint(0), null, false, null, null, true);
 
                     relicManager.CharacterAdded(characterState, cardEffectState.GetParentCardState());
 
                     if (!cardEffectParams.saveManager.PreviewMode)
                     {
                         yield return cardEffectParams.roomManager.GetRoomUI().CenterCharacters(roomState, true, false, true);
+                        num++;
                     }
 
                     if (!(characterState == null))
@@ -122,17 +132,22 @@ namespace CustomEffectsPathogens
                             wasPlayed = true,
                             characterSummoned = characterState
                         });*/
+                        //above yield return makes it crash
+                        //cardManager.SetCardIsDrawable(cardState, drawable: true);
+                        //cardManager.SetCardIsDrawable(cardState, drawable: false);
                     }
-                    //cardManager.SetCardIsDrawable(cardState, drawable: false);
+                    yield break;
+                    
 
 
 
-                    //cardManager.SetCardIsDrawable(cardState, drawable: true);
+                    
                 }
 
             }
         }
-        
+
     }
+}
 
 
