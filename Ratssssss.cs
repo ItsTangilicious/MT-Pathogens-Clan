@@ -75,6 +75,7 @@ namespace Test_Bounce
                 BacterialGrowth.BuildAndRegister();   
                 BigBadonkas.BuildAndRegister();
                 BoosterShot.BuildandRegister();
+            ColiformDeterminatorSpell.BuildAndRegister();
                 EvolvingResistance.BuildandRegister();
             //EvolvingResistance2A.BuildandRegister();
             //EvolvingResistance2B.BuildandRegister();
@@ -109,7 +110,7 @@ namespace Test_Bounce
                 AntigenResponderMonster.BuildAndRegister();
                 AsymptomaticCarrier.BuildAndRegister();
                 BorreliaDaemonium.BuildAndRegister();
-                ColiformDeterminator.BuildAndRegister();
+                //ColiformDeterminator.BuildAndRegister();
                 CryogenicStorage.BuildAndRegister();
                 GenomeSplicer.BuildAndRegister();
                 Plaguebringer.BuildAndRegister();
