@@ -239,14 +239,7 @@ namespace HellbornPathogens.Champions
                                 EffectStateType = typeof(CardEffectRecruitsShedding),
                                 TargetMode = TargetMode.Room,
                                 TargetTeamType = Team.Type.Monsters,
-                            }
-                        }
-                    },
-                    new CharacterTriggerDataBuilder
-                    {
-                        Trigger = CharacterTriggerData.Trigger.OnHit,
-                        EffectBuilders = new List<CardEffectDataBuilder>
-                        {
+                            },
                             new CardEffectDataBuilder
                             {
                                 EffectStateType = typeof(CardEffectRecruitsShedding),
@@ -255,6 +248,7 @@ namespace HellbornPathogens.Champions
                             }
                         }
                     },
+                    
                 }
 
             };
@@ -288,15 +282,14 @@ namespace HellbornPathogens.Champions
                                 EffectStateType = typeof(CardEffectRecruitsShedding),
                                 TargetMode = TargetMode.Room,
                                 TargetTeamType = Team.Type.Monsters,
-                            }
-                        }
-                    },
-                    new CharacterTriggerDataBuilder
-                    {
-                        Trigger = CharacterTriggerData.Trigger.OnHit,
-                        EffectBuilders = new List<CardEffectDataBuilder>
-                        {
-                            new CardEffectDataBuilder
+                            },
+                             new CardEffectDataBuilder
+                            {
+                                EffectStateType = typeof(CardEffectRecruitsShedding),
+                                TargetMode = TargetMode.Room,
+                                TargetTeamType = Team.Type.Monsters,
+                            },
+                              new CardEffectDataBuilder
                             {
                                 EffectStateType = typeof(CardEffectRecruitsShedding),
                                 TargetMode = TargetMode.Room,
@@ -304,19 +297,7 @@ namespace HellbornPathogens.Champions
                             }
                         }
                     },
-                     new CharacterTriggerDataBuilder
-                    {
-                        Trigger = CharacterTriggerData.Trigger.OnHit,
-                        EffectBuilders = new List<CardEffectDataBuilder>
-                        {
-                            new CardEffectDataBuilder
-                            {
-                                EffectStateType = typeof(CardEffectRecruitsShedding),
-                                TargetMode = TargetMode.Room,
-                                TargetTeamType = Team.Type.Monsters,
-                            }
-                        }
-                    }
+                   
                 }
 
             };
