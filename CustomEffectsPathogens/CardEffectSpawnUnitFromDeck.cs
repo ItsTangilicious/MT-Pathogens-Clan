@@ -68,8 +68,8 @@ namespace CustomEffectsPathogens
         public override bool TestEffect(CardEffectState cardEffectState, CardEffectParams cardEffectParams)
         {
             toProcessCards.Clear();
-            toProcessCards.AddRange(cardEffectParams.cardManager.GetDrawPile());
-            toProcessCards.AddRange(cardEffectParams.cardManager.GetDiscardPile());
+            toProcessCards.AddRange(cardEffectParams.cardManager.GetDrawPile(true));
+            toProcessCards.AddRange(cardEffectParams.cardManager.GetDiscardPile(true));
             RoomState selectedRoom = cardEffectParams.GetSelectedRoom();
             return !selectedRoom.GetIsPyreRoom() && selectedRoom.GetFirstEmptyMonsterPoint() != null;
         }
