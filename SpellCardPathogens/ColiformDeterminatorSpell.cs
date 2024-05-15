@@ -40,7 +40,7 @@ namespace SpellCardPathogens
                                             TargetMode = TargetMode.DrawPile,
                                             TargetTeamType = Team.Type.None,
                                             TargetCardType = CardType.Monster,
-                                            ParamInt = 2,
+                                            ParamInt = 1,
 
                                         }
                     
