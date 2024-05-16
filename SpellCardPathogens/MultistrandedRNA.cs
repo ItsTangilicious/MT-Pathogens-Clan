@@ -19,7 +19,7 @@ namespace SpellCardPathogens
                 {
                     CardID = ID,
                     Name = "Multistrand DNA",
-                    Description = "Apply <b>Replicate <nobr>[effect1.status0.power]</nobr></b>, <b>Melee Weakness <nobr>[effect2.status0.power]</nobr></b>, and <nobr>[multistrike] [effect0.status0.power]</nobr> to a friendly unit.",
+                    Description = "Apply <b>Replicate</b>, <b>Melee Weakness <nobr>[effect2.status0.power]</nobr></b>, and <nobr>[multistrike] [effect0.status0.power]</nobr> to a friendly unit.",
                     Cost = 3,
                     Rarity = CollectableRarity.Rare,
                     TargetsRoom = true,
