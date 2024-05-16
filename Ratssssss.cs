@@ -16,7 +16,6 @@ using Trainworks.AssetConstructors;
 using System.Text.RegularExpressions;
 using HellPathogens.PathogenSubtype;
 using Hellpathogens.Misc;
-using HellbornPathogens.Champions;
 using HellPathogens.Clan;
 using MonsterTrainModdingTemplate.MonsterCards;
 using CustomEffectsPathogens;
@@ -29,6 +28,7 @@ using HellPathogens.CardPools;
 using HellPathogens.InstrumentSubtype;
 using Patches;
 using Trainworks.Managers;
+using Champions;
 
 
 

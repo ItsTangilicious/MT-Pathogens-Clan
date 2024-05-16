@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Test_Bounce</RootNamespace>
+    <BaseOutputPath>E:\Program Files (x86)\SteamLibrary\SteamApps\workshop\content\1102190\Rat Clan\Plugins</BaseOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>E:\Program Files (x86)\SteamLibrary\SteamApps\workshop\content\1102190\2187468759\BepInEx\core\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>E:\Program Files (x86)\SteamLibrary\SteamApps\common\Monster Train\MonsterTrain_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>E:\Program Files (x86)\SteamLibrary\SteamApps\workshop\content\1102190\2187468759\BepInEx\core\BepInEx.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Harmony">
+      <HintPath>E:\Program Files (x86)\SteamLibrary\SteamApps\workshop\content\1102190\2187468759\BepInEx\core\BepInEx.Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="TrainworksModdingTools">
+      <HintPath>E:\Program Files (x86)\SteamLibrary\SteamApps\workshop\content\1102190\2205086946\plugins\TrainworksModdingTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Addressables">
+      <HintPath>E:\Program Files (x86)\SteamLibrary\SteamApps\common\Monster Train\MonsterTrain_Data\Managed\Unity.Addressables.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>E:\Program Files (x86)\SteamLibrary\SteamApps\common\Monster Train\MonsterTrain_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>E:\Program Files (x86)\SteamLibrary\SteamApps\common\Monster Train\MonsterTrain_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
