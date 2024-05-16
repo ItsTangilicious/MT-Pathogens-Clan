@@ -56,6 +56,7 @@ namespace
                                 BonusDamage = 0,
                                 BonusHP = 0,
                                 BonusSize = 1,
+                                LinkedPactDuplicateRarity = CollectableRarity.Rare,
                                 TriggerUpgradeBuilders = new List<CharacterTriggerDataBuilder>
                                 {
                                     new CharacterTriggerDataBuilder

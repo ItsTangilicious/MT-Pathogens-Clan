@@ -100,6 +100,7 @@ namespace MonsterCardPathogens
                                 UseUpgradeHighlightTextTags = true,
                                 BonusDamage = -10,
                                 BonusHP = 0,
+                                LinkedPactDuplicateRarity = CollectableRarity.Rare,
                                 TriggerUpgradeBuilders = new List<CharacterTriggerDataBuilder>
                                 {
                                     new CharacterTriggerDataBuilder

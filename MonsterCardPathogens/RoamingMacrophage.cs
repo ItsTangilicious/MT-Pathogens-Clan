@@ -63,10 +63,11 @@ namespace MonsterCardPathogens
                                 UseUpgradeHighlightTextTags = true,
                                 BonusDamage = 0,
                                 BonusHP = 0,
+                                LinkedPactDuplicateRarity = CollectableRarity.Rare,
                                 StatusEffectUpgrades =
                                 {   new StatusEffectStackData
                                     {
-                                        statusId = VanillaStatusEffectIDs.Multistrike,
+                                        statusId = VanillaStatusEffectIDs.Quick,
                                         count = 1
                                     }
                                 },
@@ -96,32 +97,12 @@ namespace MonsterCardPathogens
                             },
                             TriggerBuilders =
                             {
-                                new CharacterTriggerDataBuilder
-                                {
-                                    TriggerID = TriggerID,
-                                    Trigger = CharacterTriggerData.Trigger.OnKill,
-                                    Description = "+3[attack] and [health].",
-                                    EffectBuilders =
-                                    {
-                                        new CardEffectDataBuilder
-                                        {
-                                            EffectStateType = typeof(CardEffectAddTempCardUpgradeToUnits),
-                                            TargetTeamType = Team.Type.Monsters,
-                                            TargetMode = TargetMode.Self,
-                                            ParamInt = 1,
-                                            ParamCardUpgradeData = new CardUpgradeDataBuilder
-                                            {
-                                                UpgradeID = "RoamingMacrophageUpgrade",
-                                                BonusDamage = 3,
-                                                BonusHP = 3,
-                                            }.Build(),
-                                        }
-                                    }
-                                },
-                                new CharacterTriggerDataBuilder
+                                
+                                /*new CharacterTriggerDataBuilder
                                 {
                                     TriggerID = Rats.CLANID + "_RoamingMacrophageEnchant",
                                     Trigger = CharacterTriggerData.Trigger.AfterSpawnEnchant,
+                                     Description = "Release <b>Cytokines</b>.",
                                     EffectBuilders = new List<CardEffectDataBuilder>
                                     {
                                         new CardEffectDataBuilder
@@ -145,7 +126,7 @@ namespace MonsterCardPathogens
                                 {
                                     TriggerID = "RoamingMacrophageResolve",
                                     Trigger = CharacterTriggerData.Trigger.PostCombat,
-                                    Description = "Destroy all other friendly units.",
+                                    Description = "Destroy all units with <b>Cytokines</b>.",
                                     EffectBuilders = new List<CardEffectDataBuilder>
                                     {
                                         new CardEffectDataBuilder
@@ -160,7 +141,29 @@ namespace MonsterCardPathogens
 
                                         },
                                     }
-                                }
+                                },*/
+                                new CharacterTriggerDataBuilder
+                                {
+                                    TriggerID = TriggerID,
+                                    Trigger = CharacterTriggerData.Trigger.OnKill,
+                                    Description = "+3[attack] and [health].",
+                                    EffectBuilders =
+                                    {
+                                        new CardEffectDataBuilder
+                                        {
+                                            EffectStateType = typeof(CardEffectAddTempCardUpgradeToUnits),
+                                            TargetTeamType = Team.Type.Monsters,
+                                            TargetMode = TargetMode.Self,
+                                            ParamInt = 1,
+                                            ParamCardUpgradeData = new CardUpgradeDataBuilder
+                                            {
+                                                UpgradeID = "RoamingMacrophageUpgrade",
+                                                BonusDamage = 3,
+                                                BonusHP = 3,
+                                            }.Build(),
+                                        }
+                                    }
+                                },
                             },
                             
                         },

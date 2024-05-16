@@ -56,6 +56,7 @@ namespace MonsterCardPathogens
                                 UseUpgradeHighlightTextTags = true,
                                 BonusDamage = 0,
                                 BonusHP = 0,
+                                LinkedPactDuplicateRarity = CollectableRarity.Rare,
                                 TriggerUpgradeBuilders = new List<CharacterTriggerDataBuilder>
                                 {
                                     new CharacterTriggerDataBuilder
@@ -114,7 +115,7 @@ namespace MonsterCardPathogens
                                 new CharacterTriggerDataBuilder
                                 {
                                     TriggerID = "GenomeSplicerResolveTrigger",
-                                    Trigger = CharacterTriggerData.Trigger.PostCombat,
+                                    Trigger = CharacterTriggerData.Trigger.OnTurnBegin,
                                     Description = "Gain [spikes] <b><nobr>[effect0.status0.power]</nobr></b> per <b>Shard</b>.",
                                     EffectBuilders = new List<CardEffectDataBuilder>
                                     {

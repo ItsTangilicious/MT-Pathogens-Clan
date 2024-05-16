@@ -75,7 +75,8 @@ namespace MonsterCardPathogens
                                 HideUpgradeIconOnCard = true,
                                 UseUpgradeHighlightTextTags = true,
                                 BonusDamage = 0,
-                                BonusHP = 0, 
+                                BonusHP = 0,
+                                LinkedPactDuplicateRarity = CollectableRarity.Rare,
                             },
                             TriggerBuilders =
                             {

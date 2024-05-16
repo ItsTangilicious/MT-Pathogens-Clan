@@ -51,12 +51,13 @@ namespace MonsterCardPathogens
                             UnitSynthesisBuilder = new CardUpgradeDataBuilder
                             {
                                 UpgradeID = "ColiformDeterminatorSynthesis",
-                                UpgradeDescription = "-5[attack], -5[health], and <b>Resolve:</b> 'Spawn a copy of a random unit from your deck to the back of this room. This ignores your discard pile.'",
+                                UpgradeDescription = "-5[attack], -5[health], and <b>Resolve:</b> 'On my first turn, do nothing. On each other turn, spawn a copy of a random unit from your deck to the back of this room.'",
                                 HideUpgradeIconOnCard = true,
                                 UseUpgradeHighlightTextTags = true,
                                 BonusDamage = -5,
                                 BonusHP = -5,
                                 BonusSize = 0,
+                                LinkedPactDuplicateRarity = CollectableRarity.Rare,
                                 TriggerUpgradeBuilders = new List<CharacterTriggerDataBuilder>
                                 {
                                     new CharacterTriggerDataBuilder
@@ -85,7 +86,7 @@ namespace MonsterCardPathogens
                                 {
                                     TriggerID = TriggerID,
                                     Trigger = CharacterTriggerData.Trigger.PostCombat,
-                                    Description = "Spawn a copy of a random unit from your deck to the back of this room. This ignores your discard pile.",
+                                    Description = "On my first turn, do nothing. On each other turn, spawn a copy of a random unit from your deck to the back of this room.",
                                     EffectBuilders =
                                     {
                                         

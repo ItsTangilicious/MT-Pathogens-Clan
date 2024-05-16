@@ -59,6 +59,7 @@ namespace MonsterCardPathogens
                                 UpgradeDescription = "'<b>Resolve:</b> Summon 1 Recombinant Virus.'",
                                 HideUpgradeIconOnCard = true,
                                 UseUpgradeHighlightTextTags = true,
+                                LinkedPactDuplicateRarity = CollectableRarity.Rare,
                                 TriggerUpgradeBuilders = new List<CharacterTriggerDataBuilder>
                                 {
                                     new CharacterTriggerDataBuilder
