@@ -25,9 +25,9 @@ namespace CustomEffectsPathogens
             {
                 StatusEffectStateType = typeof(StatusEffectReplicate),
                 StatusID = statusID,
-                IsStackable = false,
+                IsStackable = true,
                 IconPath = "assets/status_weakness.png",
-                TriggerStage = StatusEffectData.TriggerStage.OnDeath,
+                TriggerStage = StatusEffectData.TriggerStage.None,
                 DisplayCategory = StatusEffectData.DisplayCategory.Positive,
                 ShowStackCount = false,
                 RemoveAtEndOfTurn = false,

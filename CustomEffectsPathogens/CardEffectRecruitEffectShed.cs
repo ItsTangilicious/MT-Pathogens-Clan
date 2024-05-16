@@ -50,7 +50,7 @@ namespace CustomEffectsPathogens
 
             if (!cardEffectParams.saveManager.PreviewMode)
             {
-                yield return cardEffectParams.roomManager.GetRoomUI().CenterCharacters(roomState, true, false, true);
+                yield return cardEffectParams.roomManager.GetRoomUI().CenterCharacters(roomState, false, false, false);
             }
 
             yield break;
