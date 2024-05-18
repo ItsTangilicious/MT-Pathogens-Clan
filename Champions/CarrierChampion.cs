@@ -70,7 +70,7 @@ namespace Champions
 
                         TriggerID = Rats.CLANID + "_ImmuneTriggerI",
                         Trigger = CustomTriggerBetterRally.OnCustomTriggerBetterRallyCharTrigger.GetEnum(),
-                        Description = "Give all friendly units +3[attack], +3[health].",
+                        Description = "Give all friendly units +2[attack], +2[health].",
                         EffectBuilders =
                         {
                             new CardEffectDataBuilder
@@ -83,8 +83,8 @@ namespace Champions
                                 {
 
                                     UpgradeID = "ImmuneIUpgrade",
-                                    BonusDamage = 3,
-                                    BonusHP = 3,
+                                    BonusDamage = 2,
+                                    BonusHP = 2,
                                 }.Build(),
 
                             },
@@ -109,7 +109,7 @@ namespace Champions
 
                         TriggerID = Rats.CLANID + "_ImmuneTriggerII",
                         Trigger = CustomTriggerBetterRally.OnCustomTriggerBetterRallyCharTrigger.GetEnum(),
-                        Description = "Give all friendly units +5[attack], +5[health].",
+                        Description = "Give all friendly units +4[attack], +4[health].",
                         EffectBuilders =
                         {
                             new CardEffectDataBuilder
@@ -121,8 +121,8 @@ namespace Champions
                                 ParamCardUpgradeData = new CardUpgradeDataBuilder
                                 {
                                     UpgradeID = "ImmuneIIUpgrade",
-                                    BonusDamage = 5,
-                                    BonusHP = 5,
+                                    BonusDamage = 4,
+                                    BonusHP = 4,
                                 }.Build(),
 
                             },
@@ -155,7 +155,7 @@ namespace Champions
 
                         TriggerID = Rats.CLANID + "_ImmuneTriggerIII",
                         Trigger = CustomTriggerBetterRally.OnCustomTriggerBetterRallyCharTrigger.GetEnum(),
-                        Description = "Give all friendly units +10[attack], +10[health].",
+                        Description = "Give all friendly units +8[attack], +8[health].",
                         EffectBuilders =
                         {
                             new CardEffectDataBuilder
@@ -167,8 +167,8 @@ namespace Champions
                                 ParamCardUpgradeData = new CardUpgradeDataBuilder
                                 {
                                     UpgradeID = "ImmuneIIIUpgrade",
-                                    BonusDamage = 10,
-                                    BonusHP = 10,
+                                    BonusDamage = 8,
+                                    BonusHP = 8,
                                 }.Build(),
 
                             },
@@ -317,7 +317,7 @@ namespace Champions
                     new CharacterTriggerDataBuilder
                     {
                         TriggerID = Rats.CLANID + "_BioengineerTriggerI",
-                        Description = "Draw a unit and apply +10[attack], +10[health] to all units in hand.",
+                        Description = "Draw a unit and apply +10[attack], +5[health] to all units in hand.",
                         Trigger = CharacterTriggerData.Trigger.OnSpawn,
                         EffectBuilders = new List<CardEffectDataBuilder>
                         {
@@ -376,7 +376,7 @@ namespace Champions
                                 {
                                     UpgradeID = Rats.CLANID + "_BionengineerUpgradeHandI",
                                     BonusDamage = 10,
-                                    BonusHP = 10,
+                                    BonusHP = 5,
                                     Filters = new List<CardUpgradeMaskData>
                                     {
                                         new CardUpgradeMaskDataBuilder
@@ -406,7 +406,7 @@ namespace Champions
                     new CharacterTriggerDataBuilder
                     {
                         TriggerID = Rats.CLANID + "_BioengineerTriggerII",
-                        Description = "Draw a unit and apply +25[attack], +25[health] to all units in hand.",
+                        Description = "Draw a unit and apply +20[attack], +10[health] to all units in hand.",
                         Trigger = CharacterTriggerData.Trigger.OnSpawn,
                         EffectBuilders = new List<CardEffectDataBuilder>
                         {
@@ -460,8 +460,8 @@ namespace Champions
                                 ParamCardUpgradeData = new CardUpgradeDataBuilder
                                 {
                                     UpgradeID = Rats.CLANID + "_BionengineerUpgradeHandII",
-                                    BonusDamage = 25,
-                                    BonusHP = 25,
+                                    BonusDamage = 20,
+                                    BonusHP = 10,
                                     Filters = new List<CardUpgradeMaskData>
                                     {
                                         new CardUpgradeMaskDataBuilder
@@ -491,7 +491,7 @@ namespace Champions
                     new CharacterTriggerDataBuilder
                     {
                         TriggerID = Rats.CLANID + "_BioengineerTriggerIII",
-                        Description = "Draw two units and apply +50[attack], +50[health], and -1[size] to all units in hand.",
+                        Description = "Draw two units and apply +40[attack], +20[health], and -1[size] to all units in hand.",
                         Trigger = CharacterTriggerData.Trigger.OnSpawn,
                         EffectBuilders = new List<CardEffectDataBuilder>
                         {
@@ -545,8 +545,8 @@ namespace Champions
                                 ParamCardUpgradeData = new CardUpgradeDataBuilder
                                 {
                                     UpgradeID = Rats.CLANID + "_BionengineerUpgradeHandI",
-                                    BonusDamage = 50,
-                                    BonusHP = 50,
+                                    BonusDamage = 40,
+                                    BonusHP = 20,
                                     BonusSize = -1,
                                     Filters = new List<CardUpgradeMaskData>
                                     {
