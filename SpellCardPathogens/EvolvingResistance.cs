@@ -56,7 +56,7 @@ namespace SpellCardPathogens
                             new StatusEffectStackData
                             {
                                 statusId = VanillaStatusEffectIDs.Armor,
-                                count =  10
+                                count =  5
                             }
                         }
                      },
@@ -150,7 +150,7 @@ namespace SpellCardPathogens
                             new StatusEffectStackData
                             {
                                 statusId = VanillaStatusEffectIDs.Armor,
-                                count =  10
+                                count =  5
                             }
                         }
                      },
@@ -164,7 +164,7 @@ namespace SpellCardPathogens
                             new StatusEffectStackData
                             {
                                 statusId = VanillaStatusEffectIDs.Rage,
-                                count =  5
+                                count = 3
                             }
                         }
                      },
@@ -258,7 +258,7 @@ namespace SpellCardPathogens
                             new StatusEffectStackData
                             {
                                 statusId = VanillaStatusEffectIDs.Armor,
-                                count =  10
+                                count =  5
                             }
                         }
                      },
@@ -355,7 +355,7 @@ namespace SpellCardPathogens
                             new StatusEffectStackData
                             {
                                 statusId = VanillaStatusEffectIDs.Armor,
-                                count = 10
+                                count = 5
                             }
                         }
                      },
@@ -369,7 +369,7 @@ namespace SpellCardPathogens
                             new StatusEffectStackData
                             {
                                 statusId = VanillaStatusEffectIDs.Rage,
-                                count = 5
+                                count = 3
                             }
                         }
                      },
@@ -447,7 +447,7 @@ namespace SpellCardPathogens
                             new StatusEffectStackData
                             {
                                 statusId = VanillaStatusEffectIDs.Armor,
-                                count = 12
+                                count = 6
                             }
                         }
                      },
@@ -461,7 +461,7 @@ namespace SpellCardPathogens
                                     new StatusEffectStackData
                                     {
                                         statusId = VanillaStatusEffectIDs.Rage,
-                                        count = 6
+                                        count = 3
                                     }
                                 }
                             }
@@ -537,7 +537,7 @@ namespace SpellCardPathogens
                             new StatusEffectStackData
                             {
                                 statusId = VanillaStatusEffectIDs.Armor,
-                                count =  10
+                                count =  5
                             }
                         }
                      },
