@@ -20,6 +20,7 @@ namespace RelicsPathogens
                 CollectableRelicID = Rats.GUID + "_ResearchNotebookRelic",
                 Name = "Research Notebook",
                 Description = "When you summon the second unit during a turn, draw 1 card and gain +1[ember]. ",
+                RelicActivatedKey = "RelicsPathogens_com.Tang.Rats.generic_ResearchNotebookRelic_Activated_Key",
                 RelicPoolIDs = { VanillaRelicPoolIDs.MegaRelicPool },
                 IconPath = "AssetsAll/ArtifactAssets/ResearchNotebookArtifact.png",
                 ClanID = Clan.ID,

@@ -20,8 +20,11 @@ namespace RelicsPathogens
             new CollectableRelicDataBuilder
             {
                 CollectableRelicID = Rats.GUID + "_AerosolizerRelic",
-                Name = "Aerosolizer",
-                Description = "When an unit with Contagion dies, it deals damage equal to one half its Contagion stacks to the front enemy unit.",
+                //Name = "Aerosolizer",
+                NameKey = "RelicsPathogens_com.Tang.Rats.generic_AerosolizerRelic_Name_Key",
+                //Description = "When an unit with Contagion dies, it deals damage equal to one half its Contagion stacks to the front enemy unit.",
+                DescriptionKey = "RelicsPathogens_com.Tang.Rats.generic_AerosolizerRelic_Description_Key",
+                RelicActivatedKey = "RelicsPathogens_com.Tang.Rats.generic_AerosolizerRelic_Activated_Key",
                 RelicPoolIDs = { VanillaRelicPoolIDs.MegaRelicPool },
                 IconPath = "AssetsAll/ArtifactAssets/AerosolizerArtifact.png",
                 ClanID = Clan.ID,
@@ -31,6 +34,7 @@ namespace RelicsPathogens
                     {
                         RelicEffectClassType = typeof(RelicEffectContagionScalingDamage),
                         ParamSourceTeam = Team.Type.Heroes,
+                        
                         ParamInt = 1,
                         //ParamFloat = 0.5f,
                         ParamTargetMode = TargetMode.FrontInRoom,

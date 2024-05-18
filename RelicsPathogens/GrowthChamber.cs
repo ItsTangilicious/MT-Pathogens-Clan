@@ -19,6 +19,7 @@ namespace RelicsPathogens
                 CollectableRelicID = Rats.GUID + "_GrowthChamberRelic",
                 Name = "Bottled Terrarium",
                 Description = "Every 2 units you play this battle, all cards gain +1 Magic Power for the rest of this battle.",
+                RelicActivatedKey = "RelicsPathogens_com.Tang.Rats.generic_GrowthChamberRelic_Activated_Key",
                 RelicPoolIDs = { VanillaRelicPoolIDs.MegaRelicPool },
                 IconPath = "AssetsAll/ArtifactAssets/GrowthChamberArtifact.png",
                 ClanID = Clan.ID,
