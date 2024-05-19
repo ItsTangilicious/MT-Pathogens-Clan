@@ -47,7 +47,7 @@ namespace MonsterCardPathogens
                     {
                         TriggerID = "CryogenicStorageReserve",
                         Trigger = CardTriggerType.OnUnplayed,
-                        Description = "Gain <b>Shard <nobr>[effect0.upgrade.count]</nobr></b>.",
+                        Description = "Gain <b>Shard <nobr>[effect0.status0.power]</nobr></b>.",
                         CardEffectBuilders = new List<CardEffectDataBuilder>
 
                         {
