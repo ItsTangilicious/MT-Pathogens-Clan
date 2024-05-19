@@ -36,7 +36,7 @@ namespace MonsterCardPathogens
                 Targetless = false,
                 AssetPath = "AssetsAll/MonsterAssets/VirionCard.png",
                 ClanID = Clan.ID,
-                CardPoolIDs = { VanillaCardPoolIDs.MegaPool },
+                CardPoolIDs = {  },
                 TraitBuilders =
                 {
                    /* I was using this scaling effect for damage, but for some reason the extinguish effect doesn't work with SummonEffectShedding???
