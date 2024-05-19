@@ -38,7 +38,7 @@ namespace Champions
             new ChampionCardDataBuilder()
             {
                 Champion = championCharacterBuilder,
-                ChampionIconPath = "AssetsAll/MonsterAssets/SuperVirusCharacter.png",
+                ChampionIconPath = "AssetsAll/MonsterAssets/SuperVirusIcon.png",
                 StarterCardID = TestContagion.ID,
                 //StarterCardData = CustomCardManager.GetCardDataByID(TestContagion.ID),
                 //StarterCardID = VanillaCardIDs.Torch,

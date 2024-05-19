@@ -31,7 +31,7 @@ namespace Champions
             new ChampionCardDataBuilder()
             {
                 Champion = championCharacterBuilder,
-                ChampionIconPath = "AssetsAll/MonsterAssets/CarrierChampionCharacter.png",
+                ChampionIconPath = "AssetsAll/MonsterAssets/CarrierChampionIcon.png",
                 //StarterCardID = VanillaCardIDs.Torch,
                 StarterCardID = Virion.ID,
                 CardID = ID,
