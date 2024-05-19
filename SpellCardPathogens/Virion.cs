@@ -36,7 +36,7 @@ namespace SpellCardPathogens
                 Targetless = true,
                 ClanID = Clan.ID,
                 AssetPath = "AssetsAll/SpellAssets/VirionSpell.png",
-                CardPoolIDs = { VanillaCardPoolIDs.MegaPool },
+                CardPoolIDs = { },
                 EffectBuilders =
                
                 {

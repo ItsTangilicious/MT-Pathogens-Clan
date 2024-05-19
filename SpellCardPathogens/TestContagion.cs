@@ -28,7 +28,7 @@ namespace SpellCardPathogens
                 Targetless = false,
                 ClanID = Clan.ID,
                 AssetPath = "AssetsAll/SpellAssets/FleaSpell.png",
-                CardPoolIDs = { VanillaCardPoolIDs.MegaPool },
+                CardPoolIDs = {  },
                 //CardPoolIDs = new List<string> { },
                 EffectBuilders =
             {
