@@ -195,10 +195,10 @@ namespace Champions
                         Trigger = CharacterTriggerData.Trigger.OnHit,
                         EffectBuilders = new List<CardEffectDataBuilder>
                         {
-                            new CardEffectDataBuilder
+                            /*new CardEffectDataBuilder
                      {
                          EffectStateType = typeof(CardEffectLoadRecombinantArt)
-                     },
+                     },*/
                             new CardEffectDataBuilder
                             {
                                 EffectStateType = typeof(CardEffectRecruitsShedding),
@@ -230,10 +230,10 @@ namespace Champions
                         Trigger = CharacterTriggerData.Trigger.OnHit,
                         EffectBuilders = new List<CardEffectDataBuilder>
                         {
-                            new CardEffectDataBuilder
+/*new CardEffectDataBuilder
                      {
                          EffectStateType = typeof(CardEffectLoadRecombinantArt)
-                     },
+                     },*/
                             new CardEffectDataBuilder
                             {
                                 EffectStateType = typeof(CardEffectRecruitsShedding),
@@ -273,10 +273,10 @@ namespace Champions
                         Trigger = CharacterTriggerData.Trigger.OnHit,
                         EffectBuilders = new List<CardEffectDataBuilder>
                         {
-                           new CardEffectDataBuilder
+                           /*new CardEffectDataBuilder
                      {
                          EffectStateType = typeof(CardEffectLoadRecombinantArt)
-                     },
+                     },*/
                             new CardEffectDataBuilder
                             {
                                 EffectStateType = typeof(CardEffectRecruitsShedding),

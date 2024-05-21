@@ -199,7 +199,7 @@ namespace Champions
                     {
                         TriggerID = Rats.CLANID + "_HemorrhagicII",
                         Trigger = CustomTriggerBetterRally.OnCustomTriggerBetterRallyCharTrigger.GetEnum(),
-                        Description = "Gain <b>Shard [effect0.status0.power]</b>. Then gain +3[attack], +3[health] for each <b>Shard</b>.",
+                        Description = "Gain <b>Shard [effect0.status0.power]</b>. Then gain +2[attack], +1[health] for each <b>Shard</b>.",
                         EffectBuilders = new List<CardEffectDataBuilder>
                         {
                             new CardEffectDataBuilder
@@ -212,7 +212,7 @@ namespace Champions
                                      new StatusEffectStackData
                                      {
                                         statusId = VanillaStatusEffectIDs.Shard,
-                                        count = 1
+                                        count = 2
                                      }
                                 }
                             },
@@ -226,8 +226,8 @@ namespace Champions
                                 ParamCardUpgradeDataBuilder = new CardUpgradeDataBuilder
                                 {
                                     UpgradeID = Rats.CLANID + "_HemorrhagicScaleII",
-                                    BonusDamage = 3,
-                                    BonusHP = 3,
+                                    BonusDamage = 2,
+                                    BonusHP = 1,
                                 }
                             },
 
@@ -327,7 +327,7 @@ namespace Champions
                                 {
                                     UpgradeID = Rats.CLANID + "_HemorrhagicScaleIII",
                                     BonusDamage = 3,
-                                    BonusHP = 3,
+                                    BonusHP = 1,
                                 }
                             },
 
