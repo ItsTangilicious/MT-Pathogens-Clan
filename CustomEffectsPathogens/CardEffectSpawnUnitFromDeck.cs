@@ -10,6 +10,7 @@ using MonsterCardPathogens;
 namespace CustomEffectsPathogens
 //Apr 22, 2024: currently spawns a cardless copy of unit from deck to the back of the room. Does not hit the discard pile.
 //May 13, 2024: sometimes it works, sometimes it does not??? I do not know why....
+//May 19, 2024 Thanks for identifying the issue ThreeFishies! Moved Shuffle to come before the For statement
 {
     internal class CardEffectSpawnUnitFromDeck : CardEffectBase
     {
@@ -87,13 +88,14 @@ namespace CustomEffectsPathogens
             //toProcessCards.AddRange(cardEffectParams.cardManager.GetDiscardPile());
             int num =0;
             int intInRange = cardEffectState.GetIntInRange();
+            toProcessCards.Shuffle(RngId.CardDraw);
             for (int i = 0; i < toProcessCards.Count; i++)
             {
                 if (num >= intInRange)
                 {
                     break;
                 }
-                toProcessCards.Shuffle(RngId.CardDraw);
+                //toProcessCards.Shuffle(RngId.CardDraw);
                 CardState cardState = toProcessCards[i];
 
                 //cardManager.SetCardIsDrawable(cardState, drawable: false);

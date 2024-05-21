@@ -6,6 +6,9 @@ using Trainworks.Managers;
 using Trainworks.ConstantsV2;
 using MonsterCardPathogens;
 using ShinyShoe.Loading;
+using UnityEngine;
+using Test_Bounce;
+using Trainworks.BuildersV2;
 
 
 namespace CustomEffectsPathogens 
@@ -13,6 +16,7 @@ namespace CustomEffectsPathogens
     class CardEffectRecruitsShedding : CardEffectBase
     //From 3a Pony
     {
+      
         public override bool CanApplyInPreviewMode
         {
             get
@@ -36,8 +40,7 @@ namespace CustomEffectsPathogens
             RoomState roomState = cardEffectParams.GetSelectedRoom();
             RelicManager relicManager = cardEffectParams.relicManager;
             CharacterData monsterData = CustomCharacterManager.GetCharacterDataByID(RecombinantVirusMonster.CharID);
-           
-
+            
             CharacterState newMonster = null;
 
             yield return cardEffectParams.monsterManager.CreateMonsterState(monsterData, null, cardEffectParams.selectedRoom, delegate (CharacterState character)
