@@ -75,7 +75,7 @@ namespace Test_Bounce
                 BacterialGrowth.BuildAndRegister();   
                 BigBadonkas.BuildAndRegister();
                 BoosterShot.BuildandRegister();
-            ColiformDeterminatorSpell.BuildAndRegister();
+                ColiformDeterminatorSpell.BuildAndRegister();
                 EvolvingResistance.BuildandRegister();
             //EvolvingResistance2A.BuildandRegister();
             //EvolvingResistance2B.BuildandRegister();
@@ -122,7 +122,10 @@ namespace Test_Bounce
 
                 //Card Pools
                 MyCardPools.DoCardPoolStuff();
-                
+                CustomCardPoolManager.MarkCardPoolForPreloading(MyCardPools.RecombinantCardPool, clan_assets: true, game_assets: false);
+                //Thanks for telling me about the pre-loader BrandonAndZeus!
+
+
                 //Relics
                 AerosolizerRelic.BuildandRegister();
                 BallOfPhlegm.BuildandRegister();           

@@ -17,8 +17,8 @@ namespace HellPathogens.Clan
                     ClassID = ID,
                     Name = "Hellborne Pathogens",
                     TitleLoc = "HellPathogens_Clan_Name",
-                    Description = "Test Clan Description",
-                    SubclassDescription = "Test Clan Sub Description",
+                    Description = "Unleash the deadly Pathogens created by the maddest minds of Hell. Watch as the Winged succumb to sickness brought by the folly of their invasion.",
+                    SubclassDescription = "Ally yourself with the insane minds that unleashed the deadly Hellborne Pathogens.",
                     CardStyle = ClassCardStyle.Stygian,
                     IconAssetPaths =
                 {

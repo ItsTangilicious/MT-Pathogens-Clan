@@ -30,10 +30,11 @@ namespace HellPathogens.CardPools
         public static CardPool RefAllBannersPool = ScriptableObject.CreateInstance<CardPool>();
 
 
-        public static void MarkCardPoolForPreloading(CardPool cardPoolID, bool clan_assets = true, bool game_assets = false)
+        /*public static void MarkCardPoolForPreloading(CardPool cardPoolID, bool clan_assets = true, bool game_assets = false)
         {
             cardPoolID = RecombinantCardPool;
-        }
+        }*/
+        
 
         public static void DoCardPoolStuff()
        {
