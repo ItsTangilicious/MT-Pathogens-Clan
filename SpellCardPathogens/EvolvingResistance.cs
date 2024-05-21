@@ -5,6 +5,8 @@ using HellPathogens.Clan;
 using CustomEffectsPathogens;
 using HellPathogens.CardPools;
 using HarmonyLib;
+using Trainworks.Managers;
+using System.Collections.Generic;
 
 namespace SpellCardPathogens
 {
@@ -32,7 +34,7 @@ namespace SpellCardPathogens
                 Targetless = true,
                 ClanID = Clan.ID,
                 AssetPath = "AssetsAll/SpellAssets/EvolvingSpell.png",
-                CardPoolIDs = { VanillaCardPoolIDs.MegaPool },
+                CardPoolIDs = { VanillaCardPoolIDs.MegaPool },                
                 TraitBuilders =
                 {
                      new CardTraitDataBuilder
@@ -127,6 +129,8 @@ namespace SpellCardPathogens
                 ClanID = Clan.ID,
                 AssetPath = "AssetsAll/SpellAssets/EvolvingSpell.png",
                 CardPoolIDs = { },
+                IgnoreWhenCountingMastery = true,
+                LinkedMasteryCard = CustomCardManager.GetCardDataByID(evolvingResistanceCard.CardID),
                 TraitBuilders =
                 {
                      new CardTraitDataBuilder
@@ -235,6 +239,8 @@ namespace SpellCardPathogens
                 ClanID = Clan.ID,
                 AssetPath = "AssetsAll/SpellAssets/EvolvingSpell.png",
                 CardPoolIDs = { },
+                IgnoreWhenCountingMastery = true,
+                LinkedMasteryCard = CustomCardManager.GetCardDataByID(evolvingResistanceCard.CardID),
                 TraitBuilders =
                 {
                      new CardTraitDataBuilder
@@ -343,6 +349,8 @@ namespace SpellCardPathogens
                 ClanID = Clan.ID,
                 AssetPath = "AssetsAll/SpellAssets/EvolvingSpell.png",
                 CardPoolIDs = { },
+                IgnoreWhenCountingMastery = true,
+                LinkedMasteryCard = CustomCardManager.GetCardDataByID(evolvingResistanceCard.CardID),
                 EffectBuilders =
                 {
                      new CardEffectDataBuilder
@@ -435,6 +443,8 @@ namespace SpellCardPathogens
                 ClanID = Clan.ID,
                 AssetPath = "AssetsAll/SpellAssets/EvolvingSpell.png",
                 CardPoolIDs = { },
+                IgnoreWhenCountingMastery = true,
+                LinkedMasteryCard = CustomCardManager.GetCardDataByID(evolvingResistanceCard.CardID),
                 EffectBuilders =
                 {
                      new CardEffectDataBuilder
@@ -525,6 +535,8 @@ namespace SpellCardPathogens
                 ClanID = Clan.ID,
                 AssetPath = "AssetsAll/SpellAssets/EvolvingSpell.png",
                 CardPoolIDs = { },
+                IgnoreWhenCountingMastery = true,
+                LinkedMasteryCard = CustomCardManager.GetCardDataByID(evolvingResistanceCard.CardID),
                 EffectBuilders =
                 {
                      new CardEffectDataBuilder

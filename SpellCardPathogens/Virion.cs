@@ -37,13 +37,14 @@ namespace SpellCardPathogens
                 ClanID = Clan.ID,
                 AssetPath = "AssetsAll/SpellAssets/VirionSpell.png",
                 CardPoolIDs = { },
+                             
                 EffectBuilders =
                
                 {
-                     new CardEffectDataBuilder
+                     /*new CardEffectDataBuilder
                      {
                          EffectStateType = typeof(CardEffectLoadRecombinantArt)
-                     },
+                     },*/
                     effect
                 },
 
