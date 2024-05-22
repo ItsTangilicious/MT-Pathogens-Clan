@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace CustomEffectsPathogens
+    //deleted from the actual mod as it was unused
 {
     internal class CardEffectAddStatusEffectOnThreshold : CardEffectBase
     {
