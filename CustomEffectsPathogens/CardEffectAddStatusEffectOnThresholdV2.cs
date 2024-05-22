@@ -5,6 +5,7 @@ using System.Text;
 using Trainworks.ConstantsV2;
 
 namespace CustomEffectsPathogens
+    //deleted from the actual mod as it was unused
 {
     public sealed class CardEffectAddStatusEffectOnStatusThresholdV2 : CardEffectBase
     {
