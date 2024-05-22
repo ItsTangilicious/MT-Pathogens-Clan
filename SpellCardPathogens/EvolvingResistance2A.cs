@@ -7,6 +7,7 @@ using HellPathogens.CardPools;
 
 
 namespace SpellCardPathogens
+    //deleted from the actual mod as it was unused
 {
     internal class EvolvingResistance2A
     {
