@@ -6,6 +6,7 @@ using System.Text;
 using Trainworks.Managers;
 
 namespace CustomEffectsPathogens
+    //deleted from the actual mod as it was unused
 {
     internal class CardEffectRecruitAllSheddings : CardEffectBase
     //From 3a Pony
