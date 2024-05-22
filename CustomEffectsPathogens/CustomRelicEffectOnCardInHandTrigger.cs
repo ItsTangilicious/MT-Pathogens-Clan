@@ -5,6 +5,7 @@ using System.Text;
 using static CharacterTriggerData;
 
 namespace Test_Bounce.CustomEffectsPathogens
+//deleted from the actual mod as it was unused
 {
     internal class CustomRelicEffectOnCardInHandTrigger : RelicEffectBase/*, ITriggerRelicEffect*/
     {
