@@ -50,7 +50,7 @@ namespace
                             UnitSynthesisBuilder = new CardUpgradeDataBuilder
                             {
                                 UpgradeID = "VibrioInfernumSynthesis",
-                                UpgradeDescription = "+1[size], <b>Multistrike 1</b>, and <b>Rally:</b> Gain <b>Rage 3</b>.",
+                                UpgradeDescription = "+1[size], <b>Multistrike 1</b>, and <b>Culture:</b> Gain <b>Rage 3</b>.",
                                 HideUpgradeIconOnCard = true,
                                 UseUpgradeHighlightTextTags = true,
                                 BonusDamage = 0,
