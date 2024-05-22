@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace CustomEffectsPathogens
+    //deleted from the actual mod as it was unused
 {
     //couldn't get to work Mar 22 2024 :(
     public sealed class CustomRelicEffectIfTraitTurnStart : RelicEffectBase/*, IStartOfPlayerTurnAfterDrawRelicEffect*/
