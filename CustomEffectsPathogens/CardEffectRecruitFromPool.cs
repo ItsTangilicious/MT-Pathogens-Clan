@@ -8,6 +8,7 @@ using MonsterCardPathogens;
 
 
 namespace CustomEffectsPathogens
+    //deleted from the actual mod as it was unused
 {
     class CardEffectRecruitFromPool : CardEffectBase
     //From 3a Pony
