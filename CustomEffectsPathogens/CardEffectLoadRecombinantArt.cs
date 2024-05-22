@@ -7,6 +7,7 @@ using System.Text;
 using Trainworks.Managers;
 
 namespace CustomEffectsPathogens
+    //deleted from the actual mod as it was unused
     //taken from Three Fishies AddThreeBackbroundPoniesArtFix in the Equestrian Mod
 {
     internal class CardEffectLoadRecombinantArt : CardEffectBase
