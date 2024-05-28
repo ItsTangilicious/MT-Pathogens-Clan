@@ -40,7 +40,7 @@ namespace CustomEffectsPathogens
             RoomState roomState = cardEffectParams.GetSelectedRoom();
             RelicManager relicManager = cardEffectParams.relicManager;
             CharacterData monsterData = CustomCharacterManager.GetCharacterDataByID(RecombinantVirusMonster.CharID);
-           CharacterData info = cardEffectState.GetParamAdditionalCharacterData();
+           //CharacterData monsterData = cardEffectState.GetParamCharacterData();
 
             CharacterState newMonster = null;
 
@@ -50,7 +50,7 @@ namespace CustomEffectsPathogens
 
             }, SpawnMode.SelectedSlot, roomState.GetMonsterPoint(0), null, false, null, null, true);
 
-            relicManager.CharacterAdded(newMonster, cardEffectState.GetParentCardState());
+            //relicManager.CharacterAdded(newMonster, cardEffectState.GetParentCardState());
 
             if (!cardEffectParams.saveManager.PreviewMode)
             {
