@@ -5,6 +5,8 @@ using Test_Bounce;
 using Trainworks.BuildersV2;
 using Trainworks.ConstantsV2;
 using SpellCardPathogens;
+using MonsterCardPathogens;
+using Trainworks.Managers;
 
 
 
@@ -204,6 +206,7 @@ namespace Champions
                                 EffectStateType = typeof(CardEffectRecruitsShedding),
                                 TargetMode = TargetMode.Room,
                                 TargetTeamType = Team.Type.Monsters,
+                                ParamCharacterData = CustomCharacterManager.GetCharacterDataByID(RecombinantVirusMonster.CharID),
                             }
                         }
                     }
@@ -239,6 +242,7 @@ namespace Champions
                                 EffectStateType = typeof(CardEffectRecruitsShedding),
                                 TargetMode = TargetMode.Room,
                                 TargetTeamType = Team.Type.Monsters,
+                                ParamCharacterData = CustomCharacterManager.GetCharacterDataByID(RecombinantVirusMonster.CharID),
                             },
                             new CardEffectDataBuilder
                             {
@@ -282,6 +286,7 @@ namespace Champions
                                 EffectStateType = typeof(CardEffectRecruitsShedding),
                                 TargetMode = TargetMode.Room,
                                 TargetTeamType = Team.Type.Monsters,
+                                ParamCharacterData = CustomCharacterManager.GetCharacterDataByID(RecombinantVirusMonster.CharID),
                             },
                              new CardEffectDataBuilder
                             {
@@ -544,7 +549,7 @@ namespace Champions
                                 TargetTeamType = Team.Type.None,
                                 ParamCardUpgradeData = new CardUpgradeDataBuilder
                                 {
-                                    UpgradeID = Rats.CLANID + "_BionengineerUpgradeHandI",
+                                    UpgradeID = Rats.CLANID + "_BionengineerUpgradeHandIII",
                                     BonusDamage = 40,
                                     BonusHP = 20,
                                     BonusSize = -1,
