@@ -39,7 +39,7 @@ namespace CustomEffectsPathogens
         public override IEnumerator ApplyEffect(CardEffectState cardEffectState, CardEffectParams cardEffectParams)
         {
             int sheddingCost = cardEffectState.GetParamInt();
-            if (sheddingCost > 0)
+            if (sheddingCost >= 0)
             {
                 cardEffectParams.selfTarget.RemoveStatusEffect(VanillaStatusEffectIDs.Shard, removeAtEndOfTurn: false, sheddingCost, showNotification: true, cardEffectParams.sourceRelic);
                 //cardEffectParams.selfTarget.RemoveStatusEffect("status_SheddingDummy", removeAtEndOfTurn: false, sheddingCost, showNotification: true, cardEffectParams.sourceRelic);
@@ -48,7 +48,8 @@ namespace CustomEffectsPathogens
             SpawnMode spawnMode = SpawnMode.SelectedSlot;
             RoomState room = cardEffectParams.GetSelectedRoom();
             CharacterState selfCharacter = cardEffectParams.selfTarget;
-            CharacterData selfCharacterData = CustomCharacterManager.GetCharacterDataByID(RecombinantVirusMonster.CharID);
+            //CharacterData selfCharacterData = CustomCharacterManager.GetCharacterDataByID(RecombinantVirusMonster.CharID);
+            CharacterData selfCharacterData = cardEffectState.GetParamCharacterData();
             SpawnPoint fromMonsterSpawnPoint = selfCharacter.GetSpawnPoint(allowLastKnownSpawnPoint: true);
             int spawnIndex2 = fromMonsterSpawnPoint.GetIndexInRoom();
             int num = room.ShiftSpawnPoints(Team.Type.Monsters, spawnIndex2);
