@@ -3,6 +3,8 @@ using Trainworks.BuildersV2;
 using Trainworks.Constants;
 using Test_Bounce;
 using CustomEffectsPathogens;
+using MonsterCardPathogens;
+using Trainworks.Managers;
 
 
 
@@ -19,6 +21,7 @@ namespace SpellCardPathogens
                 EffectStateType = typeof(CardEffectRecruitsShedding),
                 TargetMode = TargetMode.Room,
                 TargetTeamType = Team.Type.Monsters,
+                ParamCharacterData = CustomCharacterManager.GetCharacterDataByID(RecombinantVirusMonster.CharID),
             };
 
             new CardDataBuilder

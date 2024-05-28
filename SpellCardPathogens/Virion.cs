@@ -8,6 +8,7 @@ using Trainworks.Constants;
 using Test_Bounce;
 using MonsterCardPathogens;
 using Trainworks.Managers;
+using HarmonyLib;
 
 
 namespace SpellCardPathogens
@@ -18,14 +19,15 @@ namespace SpellCardPathogens
        
         public static void BuildAndRegister()
         {
-            var effect = new CardEffectDataBuilder
+            /*var effect = new CardEffectDataBuilder
             {
                 EffectStateType = typeof(CardEffectRecruitsShedding),
                 TargetMode = TargetMode.Room,
                 TargetTeamType = Team.Type.Monsters,
-            };
+                ParamCharacterData = CustomCharacterManager.GetCharacterDataByID(RecombinantVirusMonster.CharID),
+            };*/
 
-            new CardDataBuilder
+           var virionData = new CardDataBuilder
             {
                 CardID = ID,
                 Name = "Virion",
@@ -37,16 +39,27 @@ namespace SpellCardPathogens
                 ClanID = Clan.ID,
                 AssetPath = "AssetsAll/SpellAssets/VirionSpell.png",
                 CardPoolIDs = { },
-                             
+                LinkedMasteryCard = CustomCardManager.GetCardDataByID(RecombinantVirusMonster.ID),             
+                SharedMasteryCards = new List<CardData> { CustomCardManager.GetCardDataByID(RecombinantVirusMonster.ID), },
                 EffectBuilders =
-               
+
                 {
                      /*new CardEffectDataBuilder
                      {
                          EffectStateType = typeof(CardEffectLoadRecombinantArt)
                      },*/
-                    effect
+                    //effect
+                    new CardEffectDataBuilder
+                    {
+                        EffectStateType = typeof(CardEffectRecruitsShedding),
+                        ParamCharacterData = CustomCharacterManager.GetCharacterDataByID(RecombinantVirusMonster.CharID),
+                        TargetMode = TargetMode.Room,
+                        TargetTeamType = Team.Type.Monsters,
+                        ParamAdditionalCharacterData = CustomCharacterManager.GetCharacterDataByID(RecombinantVirusMonster.CharID),
+
+                    }
                 },
+           
 
                 TraitBuilders =
                {
@@ -57,7 +70,9 @@ namespace SpellCardPathogens
                },
 
             }.BuildAndRegister();
-
+            
+		AccessTools.Field(typeof(CardData), "sharedDiscoveryCards").SetValue(virionData, new List<CardData> { CustomCardManager.GetCardDataByID(RecombinantVirusMonster.ID) });
+		CustomCardManager.RegisterCustomCard(virionData, new List<string>());
         }
     }
 }

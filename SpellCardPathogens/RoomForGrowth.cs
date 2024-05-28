@@ -3,6 +3,8 @@ using Trainworks.BuildersV2;
 using Trainworks.Constants;
 using Test_Bounce;
 using CustomEffectsPathogens;
+using MonsterCardPathogens;
+using Trainworks.Managers;
 
 namespace SpellCardPathogens
 {
@@ -12,12 +14,13 @@ namespace SpellCardPathogens
 
         public static void BuildAndRegister()
         {
-            var effect = new CardEffectDataBuilder
+            /*var effect = new CardEffectDataBuilder
             {
                 EffectStateType = typeof(CardEffectRecruitsShedding),
                 TargetMode = TargetMode.Room,
                 TargetTeamType = Team.Type.Monsters,
-            };
+                ParamCharacterData = CustomCharacterManager.GetCharacterDataByID(RecombinantVirusMonster.CharID),
+            };*/
 
             new CardDataBuilder
             {
@@ -44,7 +47,14 @@ namespace SpellCardPathogens
                         TargetMode = TargetMode.Room,
                         ParamInt = 2
                     },
-                    effect
+                    //effect
+                    new CardEffectDataBuilder
+            {
+                EffectStateType = typeof(CardEffectRecruitsShedding),
+                TargetMode = TargetMode.Room,
+                TargetTeamType = Team.Type.Monsters,
+                ParamCharacterData = CustomCharacterManager.GetCharacterDataByID(RecombinantVirusMonster.CharID),
+            }
                 },
 
                 TraitBuilders =
