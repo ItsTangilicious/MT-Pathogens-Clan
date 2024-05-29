@@ -18,6 +18,7 @@ namespace MonsterCardPathogens
         public static readonly string ID = Rats.GUID + "_CryogenicStorageCard";
         public static readonly string CharID = Rats.GUID + "_CryogenicStorageCharacter";
         public static readonly string TriggerID = Rats.GUID + "_CryogenicStorageSummon";
+        public static readonly string SynthesisTriggerID = Rats.GUID + "_CryogenicStorageEssenceResolve";
 
         public static void BuildAndRegister()
         {
@@ -105,6 +106,7 @@ namespace MonsterCardPathogens
                                 {
                                     new CharacterTriggerDataBuilder
                                     {
+                                        TriggerID = SynthesisTriggerID,
                                         Trigger = CharacterTriggerData.Trigger.PostCombat,
                                         EffectBuilders = new List<CardEffectDataBuilder>
                                         {
