@@ -17,7 +17,7 @@ using System.Text.RegularExpressions;
 using HellPathogens.PathogenSubtype;
 using Hellpathogens.Misc;
 using HellPathogens.Clan;
-using MonsterTrainModdingTemplate.MonsterCards;
+
 using CustomEffectsPathogens;
 using MonsterCardPathogens;
 using RelicsPathogens;
@@ -54,7 +54,9 @@ namespace Test_Bounce
                 CustomLocalizationManager.ImportCSV("Localization/PathogensLocal.csv");
                 //Clan
                 Clan.BuildClan();
+                RecombinantVirusMonster.BuildAndRegister();
                 //Starter Cards
+
                 TestContagion.BuildAndRegister();
                 Virion.BuildAndRegister();
                 //Champions
@@ -114,7 +116,6 @@ namespace Test_Bounce
                 CryogenicStorage.BuildAndRegister();
                 GenomeSplicer.BuildAndRegister();
                 Plaguebringer.BuildAndRegister();
-                RecombinantVirusMonster.BuildAndRegister();
                 RoamingMacrophage.BuildAndRegister();
                 SimplexvirusDiabolicusMonster.BuildAndRegister();         
                 VibrioInfernum.BuildAndRegister();
