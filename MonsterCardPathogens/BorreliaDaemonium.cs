@@ -18,6 +18,7 @@ namespace MonsterCardPathogens
         public static readonly string ID = Rats.GUID + "_BorreliaDaemoniumCard";
         public static readonly string CharID = Rats.GUID + "_BorreliaDaemoniumCharacter";
         public static readonly string TriggerID = Rats.GUID + "_BorreliaDaemoniumSummon";
+        public static readonly string SynthesisTriggerID = Rats.GUID + "_BorreliaDaemoniumEssenceSummon";
         public static readonly string CardPID = Rats.GUID + "_BorreliaDaemoniumCardPool";
 
         public static void BuildAndRegister()
@@ -65,6 +66,7 @@ namespace MonsterCardPathogens
                                 {
                                     new CharacterTriggerDataBuilder
                                     {
+                                        TriggerID = TriggerID,
                                         Trigger = CharacterTriggerData.Trigger.OnSpawn,
                                         EffectBuilders = new List<CardEffectDataBuilder>
                                         {

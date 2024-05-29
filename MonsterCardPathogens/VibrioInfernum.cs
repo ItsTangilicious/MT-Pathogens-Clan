@@ -16,6 +16,7 @@ namespace
         public static readonly string ID = Rats.GUID + "_VibrioInfernum";
         public static readonly string CharID = Rats.GUID + "_VibrioInfernumCharacter";
         public static readonly string TriggerID = Rats.GUID + "_VibrioInfernumRally";
+        public static readonly string SynthesisTriggerID = Rats.GUID + "_VibrioInfernumEssenceRally";
 
         public static void BuildAndRegister()
         {
@@ -61,6 +62,7 @@ namespace
                                 {
                                     new CharacterTriggerDataBuilder
                                     {
+                                        TriggerID = SynthesisTriggerID,
                                         Trigger = CustomTriggerBetterRally.OnCustomTriggerBetterRallyCharTrigger.GetEnum(),
                                         EffectBuilders = new List<CardEffectDataBuilder>
                                         {

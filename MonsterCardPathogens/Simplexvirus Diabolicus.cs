@@ -10,9 +10,6 @@ using Trainworks.BuildersV2;
 using Test_Bounce;
 using CustomEffectsPathogens;
 
-
-
-
 namespace MonsterCardPathogens 
 {
     class SimplexvirusDiabolicusMonster
@@ -22,6 +19,7 @@ namespace MonsterCardPathogens
         public static readonly string ID = Rats.GUID + "_SimplexVirusCard";
         public static readonly string CharID = Rats.GUID + "_SimplexVirusCharacter";
         public static readonly string TriggerID = Rats.GUID + "_SimplexVirusResolveRevenge";
+        public static readonly string SynthesisTriggerID = Rats.GUID + "_SimplexVirusEssenceResolve";
 
         public static void BuildAndRegister()
         {
@@ -64,6 +62,7 @@ namespace MonsterCardPathogens
                                 {
                                     new CharacterTriggerDataBuilder
                                     {
+                                        TriggerID = SynthesisTriggerID,
                                         Trigger = Trigger.PostCombat,
                                         EffectBuilders = new List<CardEffectDataBuilder>
                                         {

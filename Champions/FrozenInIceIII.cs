@@ -16,7 +16,7 @@ namespace Champions
                 UpgradeTitle = "Frozen in Ice III",
                 BonusHP = 0,
                 BonusDamage = 0,
-                UpgradesToRemove = new List<CardUpgradeData> { FrozenInIceII.Make() },
+                /*UpgradesToRemove = new List<CardUpgradeData> { FrozenInIceII.Make() },*/
                 TraitDataUpgradeBuilders =
                 {
                   new CardTraitDataBuilder

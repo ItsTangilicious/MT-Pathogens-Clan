@@ -72,7 +72,7 @@ namespace SpellCardPathogens
             }.BuildAndRegister();
             
 		AccessTools.Field(typeof(CardData), "sharedDiscoveryCards").SetValue(virionData, new List<CardData> { CustomCardManager.GetCardDataByID(RecombinantVirusMonster.ID) });
-		CustomCardManager.RegisterCustomCard(virionData, new List<string>());
+		//CustomCardManager.RegisterCustomCard(virionData, new List<string>());
         }
     }
 }

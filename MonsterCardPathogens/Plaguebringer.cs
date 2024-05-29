@@ -17,6 +17,8 @@ namespace MonsterCardPathogens
         public static readonly string CharID = Rats.GUID + "_Plaguebringer";
         public static readonly string TriggerID = Rats.GUID + "_PlaguebringerStrike";
         public static readonly string TriggerID2 = Rats.GUID + "_PlaguebringerResolve";
+        public static readonly string SynthesisTriggerID = Rats.GUID + "_PlaguebringerEssenceStrike";
+
         public static void BuildAndRegister()
         {
             new CardDataBuilder
@@ -60,6 +62,7 @@ namespace MonsterCardPathogens
                                 {
                                     new CharacterTriggerDataBuilder
                                     {
+                                        TriggerID = SynthesisTriggerID,
                                         Trigger = CharacterTriggerData.Trigger.OnAttacking,
                                         EffectBuilders = new List<CardEffectDataBuilder>
                                         {

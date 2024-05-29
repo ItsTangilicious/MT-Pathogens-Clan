@@ -16,6 +16,7 @@ namespace MonsterCardPathogens
         public static readonly string ID = Rats.GUID + "_AntigenResponderCard";
         public static readonly string CharID = Rats.GUID + "_AntigenResponderCharacter";
         public static readonly string TriggerID = Rats.GUID + "_AntigenResponderRally";
+        public static readonly string SynthesisTriggerID = Rats.GUID + "_AntigenResponderEssenceRally";
 
         public static void BuildAndRegister()
         {
@@ -60,6 +61,7 @@ namespace MonsterCardPathogens
                                 {
                                     new CharacterTriggerDataBuilder
                                     {
+                                        TriggerID = SynthesisTriggerID,
                                         Trigger = CustomTriggerBetterRally.OnCustomTriggerBetterRallyCharTrigger.GetEnum(),
                                         EffectBuilders = new List<CardEffectDataBuilder>
                                         {
