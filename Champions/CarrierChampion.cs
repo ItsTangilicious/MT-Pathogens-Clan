@@ -249,6 +249,7 @@ namespace Champions
                                 EffectStateType = typeof(CardEffectRecruitsShedding),
                                 TargetMode = TargetMode.Room,
                                 TargetTeamType = Team.Type.Monsters,
+                                ParamCharacterData = CustomCharacterManager.GetCharacterDataByID(RecombinantVirusMonster.CharID),
                             }
                         }
                     },
@@ -293,12 +294,14 @@ namespace Champions
                                 EffectStateType = typeof(CardEffectRecruitsShedding),
                                 TargetMode = TargetMode.Room,
                                 TargetTeamType = Team.Type.Monsters,
+                                ParamCharacterData = CustomCharacterManager.GetCharacterDataByID(RecombinantVirusMonster.CharID),
                             },
                               new CardEffectDataBuilder
                             {
                                 EffectStateType = typeof(CardEffectRecruitsShedding),
                                 TargetMode = TargetMode.Room,
                                 TargetTeamType = Team.Type.Monsters,
+                                ParamCharacterData = CustomCharacterManager.GetCharacterDataByID(RecombinantVirusMonster.CharID),
                             }
                         }
                     },
