@@ -19,12 +19,6 @@ namespace MonsterCardPathogens
         public static readonly string CardPID = Rats.GUID + "_RecombinantVirusCardPool";
         public static void BuildAndRegister()
         {
-            var cardPool = new CardPoolBuilder
-            {
-                CardPoolID = CardPID,
-                CardIDs = { RecombinantVirusMonster.ID }
-            }.BuildAndRegister();
-
             new CardDataBuilder
             {
                 CardID = ID,
@@ -112,6 +106,12 @@ namespace MonsterCardPathogens
                         }
                     }
                 }
+            }.BuildAndRegister();
+
+            var cardPool = new CardPoolBuilder
+            {
+                CardPoolID = CardPID,
+                CardIDs = { RecombinantVirusMonster.ID }
             }.BuildAndRegister();
         }
     }
