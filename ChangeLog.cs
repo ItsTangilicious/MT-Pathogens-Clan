@@ -39,6 +39,16 @@ namespace Test_Bounce
          *Removed Recombinant Virus from mastery collection
          *Removed upgraded versions of Evolving Resistance from the mastery collection and the from logbook (similar to Blazing Bolts upgrades are not in the logbook)
          *Linked mastery of an upgraded Evolving Resistance to the base Evolving Resistance
+         *Deleted unneeded cases without borking the mod
+         *
+         *May 22, 2024
+         *Created StatusEffectReplicateStackable so Prolonged Life and Multistranded RNA can be Doublestacked
+         *Hopefully set Recombinant Virus to become visible when you see the Virion starter card
+         *Possibly fixed Contagion combat math giving red X on random floors when combat math is recalculated
+         *
+         *May 27, 2024
+         *CardEffectSheddingSpawn now gives tooltip info for Recombinant Virus
+         *CardEffectRecruitsShedding still does not give tooltip info and applying the same code to above causes it to crash?
          */
     }
 }

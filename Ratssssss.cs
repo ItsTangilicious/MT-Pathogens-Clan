@@ -55,6 +55,7 @@ namespace Test_Bounce
                 //Clan
                 Clan.BuildClan();
                 //Starter Cards
+                RecombinantVirusMonster.BuildAndRegister();
                 TestContagion.BuildAndRegister();
                 Virion.BuildAndRegister();
                 //Champions
@@ -66,10 +67,10 @@ namespace Test_Bounce
                 InstrumentSubtype.BuildAndRegister();
 
                 //StatusEffects
-                StatusEffectSheddingDummyStacks.Build();
                 StatusEffectReplicate.Build();
                 StatusEffectContagion.Build();
-                StatusEffectMarkedForSacrificeDummyStacks.Build();
+                //StatusEffectMarkedForSacrificeDummyStacks.Build();
+                StatusEffectReplicateStackable.Build();
 
                 //Cards - Spells               
                 BacterialGrowth.BuildAndRegister();   
@@ -113,8 +114,7 @@ namespace Test_Bounce
                 //ColiformDeterminator.BuildAndRegister();
                 CryogenicStorage.BuildAndRegister();
                 GenomeSplicer.BuildAndRegister();
-                Plaguebringer.BuildAndRegister();
-                RecombinantVirusMonster.BuildAndRegister();
+                Plaguebringer.BuildAndRegister();                
                 RoamingMacrophage.BuildAndRegister();
                 SimplexvirusDiabolicusMonster.BuildAndRegister();         
                 VibrioInfernum.BuildAndRegister();
