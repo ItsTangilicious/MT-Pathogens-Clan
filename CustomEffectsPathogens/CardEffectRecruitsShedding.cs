@@ -39,8 +39,8 @@ namespace CustomEffectsPathogens
 
             RoomState roomState = cardEffectParams.GetSelectedRoom();
             RelicManager relicManager = cardEffectParams.relicManager;
-            CharacterData monsterData = CustomCharacterManager.GetCharacterDataByID(RecombinantVirusMonster.CharID);
-           //CharacterData monsterData = cardEffectState.GetParamCharacterData();
+            //CharacterData monsterData = CustomCharacterManager.GetCharacterDataByID(RecombinantVirusMonster.CharID);
+            CharacterData monsterData = cardEffectState.GetParamCharacterData();
 
             CharacterState newMonster = null;
 
