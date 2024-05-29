@@ -49,6 +49,11 @@ namespace Test_Bounce
          *May 27, 2024
          *CardEffectSheddingSpawn now gives tooltip info for Recombinant Virus
          *CardEffectRecruitsShedding still does not give tooltip info and applying the same code to above causes it to crash?
+         *
+         *May 29, 2024
+         *Frozen in Ice II and III now stay as a 1-pip unit
+         *Gave ParamCharacterData to Patient Zero II and III so it doesn't crash as often
+         *Added tooltip key to Survival of the Prolific
          */
     }
 }
