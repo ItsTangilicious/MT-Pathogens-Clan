@@ -17,6 +17,7 @@ namespace RelicsPathogens
         {
             var virionPool = new CardPoolBuilder
             {
+                CardPoolID = Rats.GUID + "_MitoticPool",
                 CardIDs =
                 {
                     Virion.ID,
