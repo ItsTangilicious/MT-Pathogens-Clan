@@ -76,13 +76,16 @@ namespace Test_Bounce.CustomEffectsPathogens
             List<CharacterState> list = new List<CharacterState>(this._targets);
             foreach (CharacterState characterState in list)
             {
-                base.NotifyRelicTriggered(relicEffectParams.relicManager, characterState);
-                yield return relicEffectParams.combatManager.ApplyDamageToTarget((this.damageAmount * this.statusMultiplier)/2, characterState, new CombatManager.ApplyDamageToTargetParameters
+               
                 {
-                    relicState = this._srcRelicState,
-                    vfxAtLoc = this._srcRelicEffectData.GetAppliedVfx(),
-                    showDamageVfx = true
-                });
+                    base.NotifyRelicTriggered(relicEffectParams.relicManager, characterState);
+                    yield return relicEffectParams.combatManager.ApplyDamageToTarget((this.damageAmount * this.statusMultiplier) / 2, characterState, new CombatManager.ApplyDamageToTargetParameters
+                    {
+                        relicState = this._srcRelicState,
+                        vfxAtLoc = this._srcRelicEffectData.GetAppliedVfx(),
+                        showDamageVfx = true
+                    });
+                }
             }
             
             yield break;         

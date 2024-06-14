@@ -92,13 +92,19 @@ namespace CustomEffectsPathogens
             if (numStacks > 0)
             {
                 List<CharacterState> list = new List<CharacterState>();
-                ProviderManager.CombatManager.GetHeroManager().AddCharactersInRoomToList(list, roomManager.GetSelectedRoom());
-                foreach (CharacterState characterState in list)
+                //ProviderManager.CombatManager.GetHeroManager().AddCharactersInRoomToList(list, roomManager.GetSelectedRoom());
+                //thanks Brandon for th ehelp fixing the combat math issues!
+                RoomState roomState = associatedCharacter.GetSpawnPoint().GetRoomOwner();
+                if (roomState != null)
 
-                {
-                    //if (roomManager.GetSelectedRoom() == -1)
+                { roomState.AddCharactersToList(list, Team.Type.Heroes);
+                    foreach (CharacterState characterState in list)
+
                     {
-                        characterState.AddStatusEffect(StatusEffectContagion.statusID, 1);
+                        //if (roomManager.GetSelectedRoom() == -1)
+                        {
+                            characterState.AddStatusEffect(StatusEffectContagion.statusID, 1);
+                        }
                     }
                 };
             }
