@@ -20,7 +20,9 @@ namespace HellPathogens.CardPools
     {
         public static CardPool BorreliaCardPool = ScriptableObject.CreateInstance<CardPool>(); 
         public static CardPool RecombinantCardPool = ScriptableObject.CreateInstance<CardPool>();
+        public static CardPool VirionCardPool = ScriptableObject.CreateInstance<CardPool>();
         public static CardPool MagicPowerExcludePool = ScriptableObject.CreateInstance<CardPool>();
+        public static CardPool JuiceStoneExcludePool = ScriptableObject.CreateInstance<CardPool>();
         public static CardPool Resistance2A = ScriptableObject.CreateInstance<CardPool>();
         public static CardPool Resistance2B = ScriptableObject.CreateInstance<CardPool>();
         public static CardPool Resistance3A = ScriptableObject.CreateInstance<CardPool>();
@@ -38,7 +40,17 @@ namespace HellPathogens.CardPools
 
         public static void DoCardPoolStuff()
        {
-            
+
+           VirionCardPool = new CardPoolBuilder
+            {
+                CardPoolID = Rats.GUID + "_VirionCardPool",
+                CardIDs = new List<string>
+                {
+                    CustomCardManager.GetCardDataByID(Virion.ID).GetID()
+                },
+
+            }.BuildAndRegister();
+
             BorreliaCardPool = new CardPoolBuilder
             {
                 CardPoolID = Rats.GUID + "_BorreliaCardPool",
@@ -71,6 +83,7 @@ namespace HellPathogens.CardPools
                     }
                 }.BuildAndRegister();               
             }
+            
             {
                 Resistance2A = new CardPoolBuilder
                 {

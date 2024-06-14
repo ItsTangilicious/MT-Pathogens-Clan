@@ -54,6 +54,43 @@ namespace Test_Bounce
          *Frozen in Ice II and III now stay as a 1-pip unit
          *Gave ParamCharacterData to Patient Zero II and III so it doesn't crash as often
          *Added tooltip key to Survival of the Prolific
+         *
+         *June 3, 2024
+         *CardEffectRecruitsShedding should now work in preview mode
+         *Carrier - Immunologist now only buffs unit attack
+         *Carrier - Patient Zero changed from a Revenge trigger to a Resolve trigger
+         *Simplexvirus changed from a Revenge trigger to a Resolve trigger and will always summon once per round
+         *Swarm Tactics chagned from 2 ember → 3 ember, is single target, and only buffs attack. This brings it more in line with Ritual of Battle
+         *Booster Shot now gives +4 health instead of +4 attack
+         *Recombinant Virus now only applies Contagion to the front enemy unit
+         *Vibrio Infernum now requires 4 shards to gain multistrike
+         *Clarified descriptions of Grant Reapplication and Evolving Resistance
+         *Spelleogenisis reduced from 5 ember → 4 ember
+         *Prolonged Life now has Consume, decided better of it, then removed Consume from it
+         *Viral Outcropping now summons 2 Recombinant Virus instead of 3
+         *Hyperlasic Spike reduced from +2/+2 per summoned unit to +1/+1 per summoned unit
+         *Herzal's Anvil now excludes Champion units
+         *Carrier Bioengineer II and III stat gain to hand reduced to +15/+5
+         *Divinity Sequence changed from "All friendly units gain Multistrike 1. At the end of each combat, gain 10 Pact Shards." to "Your Champion can be upgraded, but all units have one fewer upgrade slots."
+         *Mitotic Division changed from "Rally and Culture abilities trigger an additional time." to "When you summon your first unit each turn, and a Virion spell to your hand."
+         *
+         *June 6, 2024
+         *Supervirus - Hemorrhagic no longer gains health on trigger, but initial health has been increased to to 10/20/30
+         *Supervirus - Hemorrhagic does not gain Trample until level III
+         *Hurried Exit cost increased 1-ember → 2-ember
+         *Multistrand DNA cost increased 3-ember → 4-ember and Melee Weakness 2 → Melee Weakness 4
+         *Mitotic Division now gives Purge to the gained Virion
+         *
+         *June 9, 2024
+         *Bacterial Growth 2-ember → 1-ember
+         *Swarm Tactics 3-ember → 2-ember
+         *Experimental Cloning Device 3-ember → 2-ember
+         *Carrier - Immunologist health changed from 15/15/20 → 20/25/30
+         *Supervirus - Hemorrhagic health changed from 10/20/30 → 15/30/45
+         *
+         *Jun 12, 2024
+         *Attempted fix for Aerosolizer
+         *Recombinant Virus now targets back of room instead of front of room.
          */
     }
 }
