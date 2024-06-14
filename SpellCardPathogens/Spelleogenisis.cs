@@ -22,7 +22,7 @@ namespace SpellCardPathogens
                 CardID = ID,
                 Name = "Spelleogenisis",
                 Description = "Apply <b>Attuned</b> to all non-healing damage spells in your hand. Apply +10 <b>Magic Power</b> to all healing spells in your hand.",
-                Cost = 5,
+                Cost = 4,
                 Rarity = CollectableRarity.Rare,
                 TargetsRoom = false,
                 Targetless = true,
@@ -75,8 +75,10 @@ namespace SpellCardPathogens
                                             },
                                             ExcludedCardTraits =
                                             {
-                                                "CardTraitStrongerMagicPower"
-                                            }
+                                                "CardTraitStrongerMagicPower", 
+                                                
+                                            },
+                                           
                                         }.Build()
                             }
 

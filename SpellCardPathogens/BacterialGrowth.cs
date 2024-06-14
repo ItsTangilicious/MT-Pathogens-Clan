@@ -18,7 +18,7 @@ namespace SpellCardPathogens
                 CardID = ID,
                 Name = "Bacterial Growth",
                 Description = "Deal <nobr>[effect0.power]</nobr> damage.",
-                Cost = 2,
+                Cost = 1,
                 Rarity = CollectableRarity.Common,
                 TargetsRoom = true,
                 Targetless = false,

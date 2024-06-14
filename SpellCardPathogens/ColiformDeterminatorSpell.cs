@@ -18,7 +18,7 @@ namespace SpellCardPathogens
             CardID = ID,
             Name = "Experimental Cloning Device",
             Description = "Spawn a copy of a random unit from your deck to the back of this room. Any [attack] or [health] buffs applied to the copied unit will apply to original card until it is played.",
-            Cost = 3,
+            Cost = 2,
             Rarity = CollectableRarity.Rare,
             TargetsRoom = true,
             Targetless = true,

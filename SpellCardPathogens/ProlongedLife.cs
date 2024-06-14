@@ -26,6 +26,13 @@ namespace SpellCardPathogens
                 ClanID = Clan.ID,
                 AssetPath = "AssetsAll/SpellAssets/ProlongedLifeSpell.png",
                 CardPoolIDs = { VanillaCardPoolIDs.MegaPool },
+                /*TraitBuilders =
+                {
+                   new CardTraitDataBuilder
+                   {
+                       TraitStateType = typeof(CardTraitExhaustState)
+                   },
+                },*/
                 EffectBuilders =
                 {
                     new CardEffectDataBuilder
@@ -37,7 +44,7 @@ namespace SpellCardPathogens
                         {
                             new StatusEffectStackData
                             {
-                                statusId = StatusEffectReplicate.statusID,
+                                statusId = StatusEffectReplicateStackable.statusID,
                                 count =  1
                             }
                         }

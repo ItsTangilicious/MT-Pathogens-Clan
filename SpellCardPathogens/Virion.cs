@@ -33,7 +33,7 @@ namespace SpellCardPathogens
                 Name = "Virion",
                 Description = "Summon 1 Recombinant Virus to the front of this floor.",
                 Cost = 1,
-                Rarity = CollectableRarity.Starter,
+                Rarity = CollectableRarity.Common,
                 TargetsRoom = true,
                 Targetless = true,
                 ClanID = Clan.ID,

@@ -18,11 +18,12 @@ namespace SpellCardPathogens
             {
                 CardID = ID,
                 Name = "Swarm Tactics",
-                Description = "Give friendly units +<nobr>{[trait0.power]}[attack]</nobr> and [health] for each friendly unit spawned during this battle.",
+                //Description = "Give friendly units +<nobr>{[trait0.power]}[attack]</nobr> and [health] for each friendly unit spawned during this battle.",
+                Description = "Give a friendly unit +<nobr>{[trait0.power]}[attack]</nobr> for each friendly unit spawned during this battle.",
                 Cost = 2,
                 Rarity = CollectableRarity.Common,
-                TargetsRoom = true,
-                Targetless = true,
+                TargetsRoom = false,
+                Targetless = false,
                 ClanID = Clan.ID,
                 AssetPath = "AssetsAll/SpellAssets/SwarmTacticsSpell.png",
                 CardPoolIDs = { VanillaCardPoolIDs.MegaPool },
@@ -39,7 +40,7 @@ namespace SpellCardPathogens
                         ParamTeamType = Team.Type.Monsters
 
                     },
-                     new CardTraitDataBuilder
+                     /*new CardTraitDataBuilder
                     {
                         TraitStateType = VanillaCardTraitTypes.CardTraitScalingUpgradeUnitHealth,
                         ParamTrackedValue = CardStatistics.TrackedValueType.AnyMonsterSpawned,
@@ -49,7 +50,7 @@ namespace SpellCardPathogens
                         ParamUseScalingParams = true,
                         ParamTeamType = Team.Type.Monsters
 
-                    },
+                    },*/
 
                 },
                 EffectBuilders =
@@ -57,7 +58,7 @@ namespace SpellCardPathogens
                     new CardEffectDataBuilder
                     {
                         EffectStateType =  VanillaCardEffectTypes.CardEffectAddTempCardUpgradeToUnits,
-                        TargetMode = TargetMode.Room,
+                        TargetMode = TargetMode.DropTargetCharacter,
                         TargetTeamType = Team.Type.Monsters,
                         ShouldTest = true,
 
@@ -65,7 +66,7 @@ namespace SpellCardPathogens
                         {
                             UpgradeID = "SwarmTacticsUpgrade",
                             BonusDamage = 0,
-                            BonusHP = 0,
+                            //BonusHP = 0,
                         }.Build(),
                     }
                 }

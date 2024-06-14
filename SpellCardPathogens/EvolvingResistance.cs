@@ -27,7 +27,7 @@ namespace SpellCardPathogens
             {
                 CardID = ID,
                 Name = "Evolving Resistance",
-                Description = "Apply [armor] <b><nobr>[effect0.status0.power]</nobr></b> to friendly units. Upgrade this card.",
+                Description = "Apply [armor] <b><nobr>[effect0.status0.power]</nobr></b> to friendly units. Upgrade this play effect.",
                 Cost = 2,
                 Rarity = CollectableRarity.Rare,
                 TargetsRoom = true,
@@ -79,7 +79,7 @@ namespace SpellCardPathogens
                     {
                         TriggerID = Rats.CLANID + "_EvolvingResistanceReserve",
                         Trigger = CardTriggerType.OnUnplayed,
-                        Description = "Apply [armor] <b><nobr>[effect0.status0.power]</nobr></b> to the front friendly unit. Upgrade this card and trigger <b>Purge</b>.",
+                        Description = "Apply [armor] <b><nobr>[effect0.status0.power]</nobr></b> to the front friendly unit. Upgrade this <b>Reserve</b> effect and trigger <b>Purge</b>.",
                         CardEffectBuilders =
                         {
                             new CardEffectDataBuilder
@@ -121,7 +121,7 @@ namespace SpellCardPathogens
             {
                 CardID = Rats.CLANID + "_EvolvingResistance2A",
                 Name = "Evolving Resistance",
-                Description = "Apply [armor] <b><nobr>[effect0.status0.power]</nobr></b> and [rage] <b><nobr>[effect1.status0.power]</nobr></b> to friendly units. Upgrade this card.",
+                Description = "Apply [armor] <b><nobr>[effect0.status0.power]</nobr></b> and [rage] <b><nobr>[effect1.status0.power]</nobr></b> to friendly units. Upgrade this play effect.",
                 Cost = 2,
                 Rarity = CollectableRarity.Rare,
                 TargetsRoom = true,
@@ -189,7 +189,7 @@ namespace SpellCardPathogens
                     {
                         TriggerID = Rats.CLANID + "_EvolvingResistanceReserve2A",
                         Trigger = CardTriggerType.OnUnplayed,
-                        Description = "Apply [armor] <b><nobr>[effect0.status0.power]</nobr></b> to the front friendly unit. Upgrade this card and trigger <b>Purge</b>.",
+                        Description = "Apply [armor] <b><nobr>[effect0.status0.power]</nobr></b> to the front friendly unit. Upgrade this <b>Reserve</b> effect and trigger <b>Purge</b>.",
                         CardEffectBuilders =
                         {
                             new CardEffectDataBuilder
@@ -231,7 +231,7 @@ namespace SpellCardPathogens
             {
                 CardID = Rats.CLANID + "_EvolvingResistance2B",
                 Name = "Evolving Resistance",
-                Description = "Apply [armor] <b><nobr>[effect0.status0.power]</nobr></b> to friendly units. Upgrade this card.",
+                Description = "Apply [armor] <b><nobr>[effect0.status0.power]</nobr></b> to friendly units. Upgrade this play effect.",
                 Cost = 2,
                 Rarity = CollectableRarity.Rare,
                 TargetsRoom = true,
@@ -285,7 +285,7 @@ namespace SpellCardPathogens
                     {
                         TriggerID = Rats.CLANID + "_EvolvingResistance2BReserve",
                         Trigger = CardTriggerType.OnUnplayed,
-                        Description = "Apply [armor] <b><nobr>[effect0.status0.power]</nobr></b> and [rage] <b><nobr>[effect1.status0.power]</nobr></b> to the front friendly unit. Upgrade this card and trigger <b>Purge</b>.",
+                        Description = "Apply [armor] <b><nobr>[effect0.status0.power]</nobr></b> and [rage] <b><nobr>[effect1.status0.power]</nobr></b> to the front friendly unit. Upgrade this <b>Reserve</b> effect and trigger <b>Purge</b>.",
                         CardEffectBuilders =
                         {
                             new CardEffectDataBuilder

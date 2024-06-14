@@ -41,7 +41,7 @@ namespace SpellCardPathogens
                         TraitStateType = VanillaCardTraitTypes.CardTraitScalingUpgradeUnitAttack,
                         ParamTrackedValue = CardStatistics.TrackedValueType.AnyMonsterSpawned,                       
                         ParamEntryDuration = CardStatistics.EntryDuration.ThisBattle,
-                        ParamInt = 2,
+                        ParamInt = 1,
                         ParamFloat = 1.0f,
                         ParamUseScalingParams = true,
                         ParamTeamType = Team.Type.Monsters
@@ -52,7 +52,7 @@ namespace SpellCardPathogens
                         TraitStateType = VanillaCardTraitTypes.CardTraitScalingUpgradeUnitHealth,
                         ParamTrackedValue = CardStatistics.TrackedValueType.AnyMonsterSpawned,
                         ParamEntryDuration = CardStatistics.EntryDuration.ThisBattle,
-                        ParamInt = 2,
+                        ParamInt = 1,
                         ParamFloat = 1.0f,
                         ParamUseScalingParams = true,
                         ParamTeamType = Team.Type.Monsters

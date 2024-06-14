@@ -16,7 +16,7 @@ namespace SpellCardPathogens
             {
                 CardID = ID,
                 Name = "Booster Shot",
-                Description = "Give a friendly unit +<nobr>4[attack]</nobr>.",
+                Description = "Give a friendly unit +<nobr>4[health]</nobr>.",
                 Cost = 1,
                 Rarity = CollectableRarity.Common,
                 TargetsRoom = true,
@@ -36,8 +36,8 @@ namespace SpellCardPathogens
                         ParamCardUpgradeData = new CardUpgradeDataBuilder
                         {
                             UpgradeID = "BoosterShotUpgrade",
-                            BonusDamage = 4,
-                            BonusHP = 0,
+                            BonusDamage = 0,
+                            BonusHP = 4,
                         }.Build(),
                     }
                 },

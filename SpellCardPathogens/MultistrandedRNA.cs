@@ -20,7 +20,7 @@ namespace SpellCardPathogens
                     CardID = ID,
                     Name = "Multistrand DNA",
                     Description = "Apply <b>Replicate</b>, <b>Melee Weakness <nobr>[effect2.status0.power]</nobr></b>, and <nobr>[multistrike] [effect0.status0.power]</nobr> to a friendly unit.",
-                    Cost = 3,
+                    Cost = 4,
                     Rarity = CollectableRarity.Rare,
                     TargetsRoom = true,
                     Targetless = false,
@@ -54,7 +54,7 @@ namespace SpellCardPathogens
                             {
                                 new StatusEffectStackData
                                 {
-                                    statusId = StatusEffectReplicate.statusID,
+                                    statusId = StatusEffectReplicateStackable.statusID,
                                     count =  1
                                 }
                             }
@@ -73,7 +73,7 @@ namespace SpellCardPathogens
                                 new StatusEffectStackData
                                 {
                                     statusId = VanillaStatusEffectIDs.MeleeWeakness,
-                                    count =  2
+                                    count =  4
                                 }
                             }
 

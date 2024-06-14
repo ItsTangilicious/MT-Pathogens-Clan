@@ -28,7 +28,7 @@ namespace SpellCardPathogens
             {
                 CardID = ID,
                 Name = "Viral Outcropping",
-                Description = "Summon 3 Recombinant Virus to the front of this floor.",
+                Description = "Summon 2 Recombinant Virus to the front of this floor.",
                 Cost = 2,
                 Rarity = CollectableRarity.Common,
                 TargetsRoom = true,
@@ -42,7 +42,7 @@ namespace SpellCardPathogens
                      {
                          EffectStateType = typeof(CardEffectLoadRecombinantArt)
                      },*/
-                    effect, effect, effect
+                    effect, effect
                 },
 
                 TraitBuilders =

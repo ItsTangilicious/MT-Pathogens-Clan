@@ -30,7 +30,8 @@ namespace SpellCardPathogens
                 {
                     new CardTraitDataBuilder
                     {
-                        TraitStateType = typeof(CardTraitStrongerMagicPower)
+                        TraitStateType = typeof(CardTraitStrongerMagicPower),
+                        ParamInt = 5,
                     }
                 },
                 EffectBuilders =
