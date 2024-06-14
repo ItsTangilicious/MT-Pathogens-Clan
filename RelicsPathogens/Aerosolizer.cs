@@ -34,14 +34,14 @@ namespace RelicsPathogens
                     {
                         RelicEffectClassType = typeof(RelicEffectContagionScalingDamage),
                         ParamSourceTeam = Team.Type.Heroes,
-                        
+
                         ParamInt = 1,
                         //ParamFloat = 0.5f,
                         ParamTargetMode = TargetMode.FrontInRoom,
                         ParamCharacterSubtype = "SubtypesData_None",
                         ParamTrigger = CharacterTriggerData.Trigger.OnDeath,
                         AppliedVfx = CustomCardManager.GetCardDataByID(VanillaCardIDs.BrambleLash).GetEffects()[0].GetAppliedVFX(),
-                        ParamStatusEffects = 
+                        ParamStatusEffects =
                         {
                             new StatusEffectStackData
                             {
@@ -50,8 +50,10 @@ namespace RelicsPathogens
                             }
                         }
 
-                    }
-                },
+                        }
+
+                    },
+                    
                 Rarity = CollectableRarity.Common
 
             }.BuildAndRegister();

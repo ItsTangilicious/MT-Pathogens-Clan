@@ -19,7 +19,7 @@ namespace RelicsPathogens
             {
                 CollectableRelicID = Rats.GUID + "_HerzalsInsight",
                 Name = "Herzal's Anvil",
-                Description = "Units with 3 or more [size] gain <b>Trample</b>.",
+                Description = "Non-Champion units that start with 3 or more [size] gain <b>Trample</b>.",
                 RelicPoolIDs = { VanillaRelicPoolIDs.MegaRelicPool },
                 IconPath = "AssetsAll/ArtifactAssets/HerzalsAnvilArtifact.png",
                 ClanID = Clan.ID,
@@ -49,6 +49,10 @@ namespace RelicsPathogens
                                             ExcludedSizes = new List<int>
                                             {
                                                 1, 2
+                                            },
+                                            ExcludedSubtypes = new List<string>
+                                            {
+                                                "SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34"
                                             }
                                         }.Build()
                         }

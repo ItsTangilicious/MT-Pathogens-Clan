@@ -18,7 +18,7 @@ namespace RelicsPathogens
             {
                 CollectableRelicID = Rats.GUID + "_GrantReapplicationRelic",
                 Name = "Grant Reapplication",
-                Description = "Earn 1.25 times more [coin]. (Rounded down to the nearest 5[coin].)",
+                Description = "Earn 25% more [coin]. (Rounded down to the nearest 5[coin].)",
                 RelicPoolIDs = { VanillaRelicPoolIDs.MegaRelicPool },
                 IconPath = "AssetsAll/ArtifactAssets/GrantREapplicationArtifact.png",
                 ClanID = Clan.ID,
