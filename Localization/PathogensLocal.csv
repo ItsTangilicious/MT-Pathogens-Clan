@@ -34,6 +34,8 @@ RelicsPathogens_com.Tang.Rats.generic_GrowthChamberRelic_Activated_Key,Text,,,,,
 ,,,,,,,,,,,
 RelicsPathogens_com.Tang.Rats.generic_ResearchNotebookRelic_Activated_Key,Text,,,,,Noted!,Noted!,Noted!,Noted!,Noted!,Noted!
 ,,,,,,,,,,,
+RelicsPathogens_com.Tang.Rats.generic_MitoticDivisionRelic_Activated_Key,Text,,,,,Split!,Split!,Split!,Split!,Split!,Split!
+,,,,,,,,,,,
 StatusEffect_Status_replicatestackable_CardText,Text,,,,,<b>Replicate</b>,<b>Replicate</b>,<b>Replicate</b>,<b>Replicate</b>,<b>Replicate</b>,<b>Replicate</b>
 StatusEffect_Status_replicatestackable_CharacterTooltipText,Text,,,,,Gains Endless. Loses Replicate when this unit dies.,Gains Endless. Loses Replicate when this unit dies.,Gains Endless. Loses Replicate when this unit dies.,Gains Endless. Loses Replicate when this unit dies.,Gains Endless. Loses Replicate when this unit dies.,Gains Endless. Loses Replicate when this unit dies.
 StatusEffect_Status_replicatestackable_CardTooltipText,Text,,,,,Gains Endless. Loses Replicate when this unit dies.,Gains Endless. Loses Replicate when this unit dies.,Gains Endless. Loses Replicate when this unit dies.,Gains Endless. Loses Replicate when this unit dies.,Gains Endless. Loses Replicate when this unit dies.,Gains Endless. Loses Replicate when this unit dies.
