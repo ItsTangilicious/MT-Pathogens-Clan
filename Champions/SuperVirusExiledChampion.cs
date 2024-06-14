@@ -69,7 +69,7 @@ namespace Champions
             {
                 UpgradeID = Rats.CLANID + "_HemorrhagicI",
                 UpgradeTitle = "Hemorrhagic I",
-                BonusHP = 5,
+                BonusHP = 10,
                 BonusDamage = 5,
 
                 TriggerUpgradeBuilders =
@@ -102,7 +102,7 @@ namespace Champions
                     {
                         TriggerID = Rats.CLANID + "_HemorrhagicI",
                         Trigger = CustomTriggerBetterRally.OnCustomTriggerBetterRallyCharTrigger.GetEnum(),
-                        Description = "Gain <b>Shard [effect0.status0.power]</b>. Then gain +1[attack], +1[health] for each <b>Shard</b>.",
+                        Description = "Gain <b>Shard [effect0.status0.power]</b>. Then gain +1[attack] for each <b>Shard</b>.",
                         EffectBuilders = new List<CardEffectDataBuilder>
                         {
                             new CardEffectDataBuilder
@@ -130,7 +130,7 @@ namespace Champions
                                 {
                                     UpgradeID = Rats.CLANID + "_HemorrhagicScaleI",
                                     BonusDamage = 1,
-                                    BonusHP = 1,
+                                    //BonusHP = 1,
                                 }
                             },
 
@@ -159,16 +159,16 @@ namespace Champions
             {
                 UpgradeID = Rats.CLANID + "_HemorrhagicII",
                 UpgradeTitle = "Hemorrhagic II",
-                BonusHP = 10,
+                BonusHP = 25,
                 BonusDamage = 10,
-                StatusEffectUpgrades =
+                /*StatusEffectUpgrades =
                 {
                     new StatusEffectStackData
                     {
                         statusId = VanillaStatusEffectIDs.Trample,
                         count = 1,
                     }
-                },
+                },*/
                 TriggerUpgradeBuilders =
                 {
                     /*new CharacterTriggerDataBuilder
@@ -199,7 +199,7 @@ namespace Champions
                     {
                         TriggerID = Rats.CLANID + "_HemorrhagicII",
                         Trigger = CustomTriggerBetterRally.OnCustomTriggerBetterRallyCharTrigger.GetEnum(),
-                        Description = "Gain <b>Shard [effect0.status0.power]</b>. Then gain +2[attack], +1[health] for each <b>Shard</b>.",
+                        Description = "Gain <b>Shard [effect0.status0.power]</b>. Then gain +2[attack] for each <b>Shard</b>.",
                         EffectBuilders = new List<CardEffectDataBuilder>
                         {
                             new CardEffectDataBuilder
@@ -227,7 +227,7 @@ namespace Champions
                                 {
                                     UpgradeID = Rats.CLANID + "_HemorrhagicScaleII",
                                     BonusDamage = 2,
-                                    BonusHP = 1,
+                                    BonusHP = 0,
                                 }
                             },
 
@@ -255,7 +255,7 @@ namespace Champions
             {
                 UpgradeID = Rats.CLANID + "_HemorrhagicIII",
                 UpgradeTitle = "Hemorrhagic III",
-                BonusHP = 20,
+                BonusHP = 40,
                 BonusDamage = 20,
 
                 StatusEffectUpgrades =
@@ -299,7 +299,7 @@ namespace Champions
                     {
                         TriggerID = Rats.CLANID + "_HemorrhagicIII",
                         Trigger = CustomTriggerBetterRally.OnCustomTriggerBetterRallyCharTrigger.GetEnum(),
-                        Description = "Gain <b>Shard [effect0.status0.power]</b>. Then gain +3[attack], +3[health] for each <b>Shard</b>.",
+                        Description = "Gain <b>Shard [effect0.status0.power]</b>. Then gain +3[attack] for each <b>Shard</b>.",
                         EffectBuilders = new List<CardEffectDataBuilder>
                         {
                             new CardEffectDataBuilder
@@ -327,7 +327,7 @@ namespace Champions
                                 {
                                     UpgradeID = Rats.CLANID + "_HemorrhagicScaleIII",
                                     BonusDamage = 3,
-                                    BonusHP = 1,
+                                    BonusHP = 0,
                                 }
                             },
 

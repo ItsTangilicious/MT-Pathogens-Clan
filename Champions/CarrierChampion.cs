@@ -63,7 +63,7 @@ namespace Champions
             {
                 UpgradeID = Rats.CLANID + "_ImmuneI",
                 UpgradeTitle = "Immunologist I",
-                BonusHP = 0,
+                BonusHP = 10,
                 BonusDamage = 0,
                 TriggerUpgradeBuilders =
                 {
@@ -72,7 +72,8 @@ namespace Champions
 
                         TriggerID = Rats.CLANID + "_ImmuneTriggerI",
                         Trigger = CustomTriggerBetterRally.OnCustomTriggerBetterRallyCharTrigger.GetEnum(),
-                        Description = "Give all friendly units +2[attack], +2[health].",
+                        //Description = "Give all friendly units +2[attack], +2[health].",
+                        Description = "Give all friendly units +2[attack].",
                         EffectBuilders =
                         {
                             new CardEffectDataBuilder
@@ -86,7 +87,7 @@ namespace Champions
 
                                     UpgradeID = "ImmuneIUpgrade",
                                     BonusDamage = 2,
-                                    BonusHP = 2,
+                                    //BonusHP = 2,
                                 }.Build(),
 
                             },
@@ -102,7 +103,7 @@ namespace Champions
             {
                 UpgradeID = Rats.CLANID + "_ImmuneII",
                 UpgradeTitle = "Immunologist II",
-                BonusHP = 5,
+                BonusHP = 15,
                 BonusDamage = 5,
                 TriggerUpgradeBuilders =
                 {
@@ -111,7 +112,8 @@ namespace Champions
 
                         TriggerID = Rats.CLANID + "_ImmuneTriggerII",
                         Trigger = CustomTriggerBetterRally.OnCustomTriggerBetterRallyCharTrigger.GetEnum(),
-                        Description = "Give all friendly units +4[attack], +4[health].",
+                        //Description = "Give all friendly units +4[attack], +4[health].",
+                        Description = "Give all friendly units +4[attack].",
                         EffectBuilders =
                         {
                             new CardEffectDataBuilder
@@ -124,7 +126,7 @@ namespace Champions
                                 {
                                     UpgradeID = "ImmuneIIUpgrade",
                                     BonusDamage = 4,
-                                    BonusHP = 4,
+                                    //BonusHP = 4,
                                 }.Build(),
 
                             },
@@ -148,7 +150,7 @@ namespace Champions
             {
                 UpgradeID = Rats.CLANID + "_ImmuneIII",
                 UpgradeTitle = "Immunologist III",
-                BonusHP = 10,
+                BonusHP = 20,
                 BonusDamage = 10,
                 TriggerUpgradeBuilders =
                 {
@@ -157,7 +159,8 @@ namespace Champions
 
                         TriggerID = Rats.CLANID + "_ImmuneTriggerIII",
                         Trigger = CustomTriggerBetterRally.OnCustomTriggerBetterRallyCharTrigger.GetEnum(),
-                        Description = "Give all friendly units +8[attack], +8[health].",
+                        //Description = "Give all friendly units +8[attack], +8[health].",
+                        Description = "Give all friendly units +8[attack].",
                         EffectBuilders =
                         {
                             new CardEffectDataBuilder
@@ -170,7 +173,7 @@ namespace Champions
                                 {
                                     UpgradeID = "ImmuneIIIUpgrade",
                                     BonusDamage = 8,
-                                    BonusHP = 8,
+                                    //BonusHP = 8,
                                 }.Build(),
 
                             },
@@ -194,7 +197,7 @@ namespace Champions
                     {
                         TriggerID = Rats.CLANID + "_ZeroTriggerI",
                         Description = "Summon 1 Recombinant Virus.",
-                        Trigger = CharacterTriggerData.Trigger.OnHit,
+                        Trigger = CharacterTriggerData.Trigger.PostCombat,
                         EffectBuilders = new List<CardEffectDataBuilder>
                         {
                             /*new CardEffectDataBuilder
@@ -230,7 +233,7 @@ namespace Champions
                     {
                         TriggerID = Rats.CLANID + "_ZeroTriggerII",
                         Description = "Summon 2 Recombinant Virus.",
-                        Trigger = CharacterTriggerData.Trigger.OnHit,
+                        Trigger = CharacterTriggerData.Trigger.PostCombat,
                         EffectBuilders = new List<CardEffectDataBuilder>
                         {
 /*new CardEffectDataBuilder
@@ -275,7 +278,7 @@ namespace Champions
                     {
                         TriggerID = Rats.CLANID + "_ZeroTriggerIII",
                         Description = "Summon 3 Recombinant Virus.",
-                        Trigger = CharacterTriggerData.Trigger.OnHit,
+                        Trigger = CharacterTriggerData.Trigger.PostCombat,
                         EffectBuilders = new List<CardEffectDataBuilder>
                         {
                            /*new CardEffectDataBuilder
@@ -414,7 +417,7 @@ namespace Champions
                     new CharacterTriggerDataBuilder
                     {
                         TriggerID = Rats.CLANID + "_BioengineerTriggerII",
-                        Description = "Draw a unit and apply +20[attack], +10[health] to all units in hand.",
+                        Description = "Draw a unit and apply +15[attack], +5[health] to all units in hand.",
                         Trigger = CharacterTriggerData.Trigger.OnSpawn,
                         EffectBuilders = new List<CardEffectDataBuilder>
                         {
@@ -468,8 +471,8 @@ namespace Champions
                                 ParamCardUpgradeData = new CardUpgradeDataBuilder
                                 {
                                     UpgradeID = Rats.CLANID + "_BionengineerUpgradeHandII",
-                                    BonusDamage = 20,
-                                    BonusHP = 10,
+                                    BonusDamage = 15,
+                                    BonusHP = 5,
                                     Filters = new List<CardUpgradeMaskData>
                                     {
                                         new CardUpgradeMaskDataBuilder
@@ -499,7 +502,7 @@ namespace Champions
                     new CharacterTriggerDataBuilder
                     {
                         TriggerID = Rats.CLANID + "_BioengineerTriggerIII",
-                        Description = "Draw two units and apply +40[attack], +20[health], and -1[size] to all units in hand.",
+                        Description = "Draw two units and apply +15[attack], +5[health], and -1[size] to all units in hand.",
                         Trigger = CharacterTriggerData.Trigger.OnSpawn,
                         EffectBuilders = new List<CardEffectDataBuilder>
                         {
@@ -553,8 +556,8 @@ namespace Champions
                                 ParamCardUpgradeData = new CardUpgradeDataBuilder
                                 {
                                     UpgradeID = Rats.CLANID + "_BionengineerUpgradeHandIII",
-                                    BonusDamage = 40,
-                                    BonusHP = 20,
+                                    BonusDamage = 15,
+                                    BonusHP = 5,
                                     BonusSize = -1,
                                     Filters = new List<CardUpgradeMaskData>
                                     {
