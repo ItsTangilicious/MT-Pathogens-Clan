@@ -140,7 +140,7 @@ namespace
                                             EffectStateType = typeof(CardEffectSheddingMultistrike),
                                             TargetMode = TargetMode.Room,
                                             TargetTeamType = Team.Type.Monsters,
-                                            ParamInt = 3,
+                                            ParamInt = 4,
                                             ParamBool = true,
                                         }
                                     }

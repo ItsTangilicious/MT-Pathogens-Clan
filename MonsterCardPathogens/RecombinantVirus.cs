@@ -1,12 +1,14 @@
 ﻿using CustomEffectsPathogens;
 using HellPathogens.Clan;
 using HellPathogens.PathogenSubtype;
+using SpellCardPathogens;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Test_Bounce;
 using Trainworks.BuildersV2;
 using Trainworks.ConstantsV2;
+using Trainworks.Managers;
 
 namespace MonsterCardPathogens 
 {
@@ -37,6 +39,8 @@ namespace MonsterCardPathogens
                 AssetPath = "AssetsAll/MonsterAssets/VirionCard.png",
                 ClanID = Clan.ID,
                 CardPoolIDs = {  },
+                IgnoreWhenCountingMastery = true,
+                //LinkedMasteryCard = CustomCardManager.GetCardDataByID(Virion.ID),
                 TraitBuilders =
                 {
                    /* I was using this scaling effect for damage, but for some reason the extinguish effect doesn't work with SummonEffectShedding???
@@ -74,8 +78,8 @@ namespace MonsterCardPathogens
                                 UpgradeDescription = "Has science gone too far?!?",
                                 HideUpgradeIconOnCard = true,
                                 UseUpgradeHighlightTextTags = true,
-                                BonusDamage = 0,
-                                BonusHP = 0,
+                                BonusDamage = 9999,
+                                BonusHP = 9999,
                                 LinkedPactDuplicateRarity = CollectableRarity.Rare,
                             },
                             TriggerBuilders =
@@ -84,13 +88,13 @@ namespace MonsterCardPathogens
                                 {
                                     TriggerID = TriggerID,
                                     Trigger = CharacterTriggerData.Trigger.OnDeath,
-                                    Description = "When this unit dies, apply <b>Contagion <nobr>[effect0.status0.power]</nobr></b> to all enemy units.",
+                                    Description = "When this unit dies, apply <b>Contagion <nobr>[effect0.status0.power]</nobr></b> to the back enemy unit.",
                                     EffectBuilders =
                                     {
                                         new CardEffectDataBuilder
                                         {
                                             EffectStateType = typeof(CardEffectAddStatusEffect),
-                                            TargetMode = TargetMode.Room,
+                                            TargetMode = TargetMode.BackInRoom,
                                             TargetTeamType = Team.Type.Heroes,
                                             //Non-scaling ParamInt
                                             //ParamInt = 4

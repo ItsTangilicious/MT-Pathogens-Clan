@@ -30,7 +30,7 @@ namespace MonsterCardPathogens
                 Targetless = false,
                 AssetPath = "AssetsAll/MonsterAssets/AsymptomaticCard.png",
                 ClanID = Clan.ID,
-                CardPoolIDs = { VanillaCardPoolIDs.UnitsAllBanner },
+                CardPoolIDs = { VanillaCardPoolIDs.UnitsAllBanner },                
                 EffectBuilders =
                 {
                     new CardEffectDataBuilder
@@ -47,6 +47,16 @@ namespace MonsterCardPathogens
                             AssetPath = "AssetsAll/MonsterAssets/AsymptomaticCharacter.png",
                             PriorityDraw = true,
                             SubtypeKeys = { HostSubtype.Host },
+                            /*RoomModifierBuilders =
+                            {
+                                new RoomModifierDataBuilder
+                                {
+                                    RoomModifierID = "_AsymptomaticRoom",
+                                    RoomModifierClassType = typeof(RoomState),
+                                    
+                                    ParamInt = 1,
+                                }
+                            },*/
                             UnitSynthesisBuilder = new CardUpgradeDataBuilder
                             {
                                 UpgradeID = "AsymptomaticCarrierSynthesis",
@@ -61,6 +71,7 @@ namespace MonsterCardPathogens
                                     new CharacterTriggerDataBuilder
                                     {
                                         Trigger = CustomTriggerBetterRally.OnCustomTriggerBetterRallyCharTrigger.GetEnum(),
+                                        Description = " Apply <b>Contagion <nobr>[effect0.status0.power]</nobr></b> to each enemy unit.",
                                         EffectBuilders = new List<CardEffectDataBuilder>
                                         {
                                             new CardEffectDataBuilder

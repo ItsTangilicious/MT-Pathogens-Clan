@@ -9,6 +9,7 @@ using Trainworks.ConstantsV2;
 using Trainworks.BuildersV2;
 using Test_Bounce;
 using CustomEffectsPathogens;
+using Trainworks.Managers;
 
 
 
@@ -65,17 +66,19 @@ namespace MonsterCardPathogens
                                     new CharacterTriggerDataBuilder
                                     {
                                         Trigger = Trigger.PostCombat,
+                                        Description = "Summon 1 Recombinant Virus.",
                                         EffectBuilders = new List<CardEffectDataBuilder>
                                         {
-                                            new CardEffectDataBuilder
+                                            /*new CardEffectDataBuilder
                      {
                          EffectStateType = typeof(CardEffectLoadRecombinantArt)
-                     },
+                     */
                                             new CardEffectDataBuilder
                                                 {
                                                      EffectStateType = typeof(CardEffectRecruitsShedding),
                                                      TargetMode = TargetMode.Room,
                                                      TargetTeamType = Team.Type.Monsters,
+                                                     ParamCharacterData = CustomCharacterManager.GetCharacterDataByID(RecombinantVirusMonster.CharID),
                                             }
                                         }
                                     }
@@ -88,11 +91,13 @@ namespace MonsterCardPathogens
                                 new CharacterTriggerDataBuilder
                                 {
                                     TriggerID = TriggerID,
-                                    Trigger = Trigger.OnHit,
-                                    Description = "Gain <b>Shard [effect0.status0.power]</b>. Then lose <b>Shard [effect2.power]</b> to summon 1 Recombinant Virus.",
+                                    //Trigger = Trigger.OnHit,
+                                    //Description = "Gain <b>Shard [effect0.status0.power]</b>. Then lose <b>Shard [effect1.power]</b> to summon 1 Recombinant Virus.",
+                                    Trigger = Trigger.PostCombat,
+                                    Description = "Summon 1 Recombinant Virus.",
                                     EffectBuilders =
                                     {
-                                        new CardEffectDataBuilder
+                                        /*new CardEffectDataBuilder
                                         {
                                             EffectStateType = typeof(CardEffectAddStatusEffect),
                                             TargetMode = TargetMode.Self,
@@ -108,18 +113,20 @@ namespace MonsterCardPathogens
                                                  },
 
                                             }
-                                        },
-                                        new CardEffectDataBuilder
+                                        },*/
+                                        /*new CardEffectDataBuilder
                      {
                          EffectStateType = typeof(CardEffectLoadRecombinantArt)
-                     },
+                     */
                                         new CardEffectDataBuilder
                                         {
-                                            EffectStateType = typeof(CardEffectSheddingSpawn),
+                                            //EffectStateType = typeof(CardEffectSheddingSpawn),
+                                            EffectStateType = typeof(CardEffectRecruitsShedding),
                                             TargetMode = TargetMode.Room,
                                             TargetTeamType = Team.Type.Monsters,
-                                            ParamInt = 2,
-                                            ParamBool = true,
+                                            //ParamInt = 2,
+                                            //ParamBool = true,
+                                            ParamCharacterData = CustomCharacterManager.GetCharacterDataByID(RecombinantVirusMonster.CharID),
                                         }
 
                                     }
