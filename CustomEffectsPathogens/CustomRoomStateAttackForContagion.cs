@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 using Trainworks.Managers;
+using UnityEngine;
 using static TargetHelper;
 
 namespace CustomEffectsPathogens
 {
-    //June 6, 2024 currently won't let the unit spawn and softlocks the game
+    //June 16, 2024 currently works but only counts first enemy unit? 
     internal class CustomRoomStateAttackForContagion : RoomStateModifierBase, IRoomStateDamageModifier, IRoomStateModifier, ILocalizationParamInt, ILocalizationParameterContext
     {
         private int contagionPerDamagePoint;
@@ -42,17 +43,21 @@ namespace CustomEffectsPathogens
                 RoomState roomOwner = characterContext.GetSpawnPoint().GetRoomOwner();
                 if (roomOwner != null)
                 {
-                    //charsInTargetRoom.Clear();
-                    roomOwner.AddCharactersToList(charsInTargetRoom, Team.Type.Heroes | Team.Type.Monsters);
-                    //int num = 0;
+                    charsInTargetRoom.Clear();
+                    ProviderManager.CombatManager.GetHeroManager().AddCharactersInRoomToList(charsInTargetRoom, roomOwner.GetRoomIndex());
+                    //roomOwner.AddCharactersToList(charsInTargetRoom, Team.Type.Heroes | Team.Type.Monsters);
+                    int num = 0;
                     
                     {
+                        
                         foreach (CharacterState item in charsInTargetRoom)
                         {
                             int currentContagionStacks = item.GetStatusEffectStacks(StatusEffectContagion.statusID);
-                            //num += currentContagionStacks;
-                            return currentContagionStacks * contagionPerDamagePoint;
+                            num += currentContagionStacks;
+                            return currentContagionStacks * contagionPerDamagePoint;                           
+                            
                         }
+                        
                     }
                 }
             }
