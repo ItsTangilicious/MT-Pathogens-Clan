@@ -43,7 +43,7 @@ namespace MonsterCardPathogens
                             CharacterID = CharID,
                             Name = "Virodaemonologist",
                             Size = 2,
-                            Health = 25,
+                            Health = 15,
                             AttackDamage = 5,
                             AssetPath = "AssetsAll/MonsterAssets/VibrodaemonologistCharacter.png",
                             PriorityDraw = true,
@@ -62,6 +62,7 @@ namespace MonsterCardPathogens
                                     new CharacterTriggerDataBuilder
                                     {
                                         Trigger = CustomTriggerBetterRally.OnCustomTriggerBetterRallyCharTrigger.GetEnum(),
+                                        Description = "Gain +2[attack] and [armor] <nobr>[effect1.status0.power]</nobr>.",
                                         EffectBuilders = new List<CardEffectDataBuilder>
                                         {
                                             new CardEffectDataBuilder
@@ -111,7 +112,7 @@ namespace MonsterCardPathogens
                                 {
                                     TriggerID = TriggerID,
                                     Trigger = CustomTriggerBetterRally.OnCustomTriggerBetterRallyCharTrigger.GetEnum(),
-                                    Description = "Gain +5[attack] and [armor] [effect1.status0.power].",
+                                    Description = "Gain +4[attack] and [armor] [effect1.status0.power].",
                                     EffectBuilders =
                                     {
                                         new CardEffectDataBuilder
@@ -126,7 +127,7 @@ namespace MonsterCardPathogens
                                                         //Use UpgradeID instead of UpgradeTitle
                                                         //UpgradeTitle = "VibrodaemonologistRallyUpgrade",
                                                         UpgradeID = "VibrodaemonologistRallyUpgrade",
-                                                        BonusDamage = 5,
+                                                        BonusDamage =4,
                                                     }.Build(),
 
 
@@ -141,7 +142,7 @@ namespace MonsterCardPathogens
                                                     new StatusEffectStackData
                                                     {
                                                         statusId = VanillaStatusEffectIDs.Armor,
-                                                        count = 5,
+                                                        count = 3,
                                                     }
                                                 }
 

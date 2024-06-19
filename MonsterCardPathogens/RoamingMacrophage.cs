@@ -8,6 +8,9 @@ using Test_Bounce;
 using HellPathogens.PathogenSubtype;
 using CustomEffectsPathogens;
 using Test_Bounce.CustomEffectsPathogens;
+using Trainworks.Constants;
+using VanillaCardPoolIDs = Trainworks.ConstantsV2.VanillaCardPoolIDs;
+using VanillaStatusEffectIDs = Trainworks.ConstantsV2.VanillaStatusEffectIDs;
 
 
 namespace MonsterCardPathogens
@@ -32,6 +35,29 @@ namespace MonsterCardPathogens
                 AssetPath = "AssetsAll/MonsterAssets/MacrophageCard.png",
                 ClanID = Clan.ID,
                 CardPoolIDs = { VanillaCardPoolIDs.UnitsAllBanner },
+                /*TraitBuilders =
+                {
+                    new CardTraitDataBuilder
+                    {
+                        TraitStateType = VanillaCardTraitTypes.CardTraitScalingUpgradeUnitAttack,
+                        ParamTrackedValue = CardStatistics.TrackedValueType.StatusEffectCountInTargetRoom,
+                        ParamStatusEffects = new List<StatusEffectStackData>
+                        {
+                                new StatusEffectStackData
+                                {
+                                    statusId = StatusEffectContagion.statusID,
+                                    count = 1
+                                }
+                        },
+                        
+                        ParamEntryDuration = CardStatistics.EntryDuration.ThisTurn,
+                        ParamInt = 1,
+                        ParamFloat = 1.0f,
+                        ParamUseScalingParams = true,
+                        ParamTeamType = Team.Type.Heroes
+
+                    }, 
+                },*/
                 EffectBuilders =
                 {
                     new CardEffectDataBuilder
@@ -43,39 +69,63 @@ namespace MonsterCardPathogens
                             CharacterID = CharID,
                             Name = "Roaming Macrophage",
                             Size = 2,
-                            Health = 10,
-                            AttackDamage = 20,
+                            Health = 20,
+                            AttackDamage = 0,
                             AssetPath = "AssetsAll/MonsterAssets/MacrophageCharacter.png",
                             PriorityDraw = true,
                             SubtypeKeys = { PathogenSubtype.Pathogen },
-                            StartingStatusEffects =
+                            /*StartingStatusEffects =
                                 {   new StatusEffectStackData
                                     {
                                         statusId = VanillaStatusEffectIDs.Quick,
                                         count = 1
                                     }
-                                },
+                                },*/
+                            RoomModifierBuilders =
+                            {
+                                new RoomModifierDataBuilder
+                                {
+                                    RoomModifierID = "_MacrophageRoom",
+                                    RoomModifierClassType = typeof(CustomRoomStateAttackForContagion),                                    
+                                    Description = "Has [attack] equal to the amount of <b>Contagion</b> on this floor.",
+                                    DescriptionInPlay = "Has [attack] equal to the amount of <b>Contagion</b> on this floor.",
+                                    ParamInt = 1,
+                                }
+                            },
                             UnitSynthesisBuilder = new CardUpgradeDataBuilder
                             {
                                 UpgradeID = "RoamingMacrophageSynthesis",
-                                UpgradeDescription = "<b>Quick</b> and '<b>Slay:</b> +2[attack]'.",
+                                //UpgradeDescription = "<b>Quick</b> and '<b>Slay:</b> +2[attack].'",
+                                UpgradeDescription = "Has [attack] equal to the amount of <b>Contagion</b> on this floor.",
                                 HideUpgradeIconOnCard = true,
                                 UseUpgradeHighlightTextTags = true,
                                 BonusDamage = 0,
                                 BonusHP = 0,
                                 LinkedPactDuplicateRarity = CollectableRarity.Rare,
-                                StatusEffectUpgrades =
+                                RoomModifierUpgradeBuilders =
+                                {
+                                    new RoomModifierDataBuilder
+                                    {
+                                    RoomModifierID = "_MacrophageSynthesisRoom",
+                                    RoomModifierClassType = typeof(CustomRoomStateAttackForContagion),
+                                    Description = "Has [attack] equal to the amount of <b>Contagion</b> on this floor.",
+                                    DescriptionInPlay = "Has [attack] equal to the amount of <b>Contagion</b> on this floor.",
+                                    ParamInt = 1,
+                                    }
+                                },
+                                /*StatusEffectUpgrades =
                                 {   new StatusEffectStackData
                                     {
                                         statusId = VanillaStatusEffectIDs.Quick,
                                         count = 1
                                     }
-                                },
-                                TriggerUpgradeBuilders = new List<CharacterTriggerDataBuilder>
+                                },*/
+                                /*TriggerUpgradeBuilders = new List<CharacterTriggerDataBuilder>
                                 {
                                     new CharacterTriggerDataBuilder
                                     {
                                         Trigger = CharacterTriggerData.Trigger.OnKill,
+                                        Description = "+2[attack].",
                                         EffectBuilders = new List<CardEffectDataBuilder>
                                         {
                                             new CardEffectDataBuilder
@@ -92,56 +142,11 @@ namespace MonsterCardPathogens
                                             }
                                         }
                                     }
-                                }
+                                }*/
 
                             },
-                            TriggerBuilders =
-                            {
-                                
-                                /*new CharacterTriggerDataBuilder
-                                {
-                                    TriggerID = Rats.CLANID + "_RoamingMacrophageEnchant",
-                                    Trigger = CharacterTriggerData.Trigger.AfterSpawnEnchant,
-                                     Description = "Release <b>Cytokines</b>.",
-                                    EffectBuilders = new List<CardEffectDataBuilder>
-                                    {
-                                        new CardEffectDataBuilder
-                                        {
-                                            EffectStateType = typeof(CardEffectEnchant),
-                                            TargetMode = TargetMode.Room,
-                                            TargetTeamType = Team.Type.Monsters,
-                                            ParamStatusEffects =
-                                            {
-                                                new StatusEffectStackData
-                                                {
-                                                    statusId = StatusEffectMarkedForSacrificeDummyStacks.statusId,
-                                                count = 1,
-                                                }
-                                            }
-                                        }
-                                    }
-
-                                },
-                                new CharacterTriggerDataBuilder
-                                {
-                                    TriggerID = "RoamingMacrophageResolve",
-                                    Trigger = CharacterTriggerData.Trigger.PostCombat,
-                                    Description = "Destroy all units with <b>Cytokines</b>.",
-                                    EffectBuilders = new List<CardEffectDataBuilder>
-                                    {
-                                        new CardEffectDataBuilder
-                                        {
-                                            EffectStateType = typeof(CardEffectKill),
-                                            TargetMode = TargetMode.Room,
-                                            TargetTeamType = Team.Type.Monsters,
-                                            TargetModeStatusEffectsFilter = new[]
-                                            {
-                                                StatusEffectMarkedForSacrificeDummyStacks.statusId
-                                            }
-
-                                        },
-                                    }
-                                },*/
+                            /*TriggerBuilders =
+                            {                               
                                 new CharacterTriggerDataBuilder
                                 {
                                     TriggerID = TriggerID,
@@ -163,18 +168,41 @@ namespace MonsterCardPathogens
                                             }.Build(),
                                         }
                                     }
-                                },
+                                },*/
+                                /*new CharacterTriggerDataBuilder
+                                {
+                                    TriggerID = TriggerID,
+                                    Trigger = CharacterTriggerData.Trigger.OnAnyHeroDeathOnFloor,
+                                    Description = "Whenever a unit with <b>Contagion</b> dies, gain [attack] equal to its <b>Contagion</b> stacks.",
+                                    EffectBuilders =
+                                    {
+                                        new CardEffectDataBuilder
+                                        {
+                                            EffectStateType = typeof(CardEffectAddTempCardUpgradeToUnits),
+                                            TargetTeamType = Team.Type.Monsters,
+                                            TargetMode = TargetMode.Self,
+                                            //ParamInt = 1,
+                                            ShouldTest = true,
+                                            ParamCardUpgradeData = new CardUpgradeDataBuilder
+                                            {
+                                                UpgradeID = "RoamingMacrophageUpgrade",                                                
+                                                //BonusHP = 0,
+                                                BonusDamage = 0,
+                                            }.Build(),
+                                        }
+                                    }
+                                },*/
                             },
-                            
-                        },
-                       
-                    }
-                    
-                },
-                
 
+                        },
+
+                    }
 
             }.BuildAndRegister();
+
+
+
         }
     }
 }
+

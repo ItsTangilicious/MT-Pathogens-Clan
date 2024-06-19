@@ -28,7 +28,7 @@ namespace MonsterCardPathogens
             {
                 CardID = ID,
                 Name = "Borrelia Daemonium",
-                Cost = 2,
+                Cost = 1,
                 CardType = CardType.Monster,
                 Rarity = CollectableRarity.Rare,
                 TargetsRoom = true,
@@ -47,8 +47,8 @@ namespace MonsterCardPathogens
                             CharacterID = CharID,
                             Name = "Borrelia Daemonium",
                             Size = 2,
-                            Health = 20,
-                            AttackDamage = 20,
+                            Health = 15,
+                            AttackDamage = 10,
                             AssetPath = "AssetsAll/MonsterAssets/BorreliaCharacter.png",
                             PriorityDraw = true,
                             SubtypeKeys = { PathogenSubtype.Pathogen },
@@ -66,6 +66,7 @@ namespace MonsterCardPathogens
                                     new CharacterTriggerDataBuilder
                                     {
                                         Trigger = CharacterTriggerData.Trigger.OnSpawn,
+                                        Description = "Draw a unit.",
                                         EffectBuilders = new List<CardEffectDataBuilder>
                                         {
                                             new CardEffectDataBuilder

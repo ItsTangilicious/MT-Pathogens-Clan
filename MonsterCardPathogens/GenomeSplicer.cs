@@ -43,7 +43,7 @@ namespace MonsterCardPathogens
                             CharacterID = CharID,
                             Name = "Spliced Monstrosity",
                             Size = 2,
-                            Health = 10,
+                            Health = 20,
                             AttackDamage = 10,
                             AssetPath = "AssetsAll/MonsterAssets/SplicedMonstrosityCharacter.png",
                             PriorityDraw = true,
@@ -62,6 +62,7 @@ namespace MonsterCardPathogens
                                     new CharacterTriggerDataBuilder
                                     {
                                         Trigger = CustomTriggerBetterRally.OnCustomTriggerBetterRallyCharTrigger.GetEnum(),
+                                        Description = "Gain [spikes] <nobr>[effect0.status0.power]</b>.",
                                         EffectBuilders = new List<CardEffectDataBuilder>
                                         {
                                             new CardEffectDataBuilder

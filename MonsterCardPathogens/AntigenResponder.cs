@@ -43,7 +43,7 @@ namespace MonsterCardPathogens
                             Name = "Antigen Mimic",
                             Size = 2,
                             Health = 30,
-                            AttackDamage = 20,
+                            AttackDamage = 10,
                             AssetPath = "AssetsAll/MonsterAssets/AntigenMimicCharacter.png",
                             PriorityDraw = true,
                             SubtypeKeys = { PathogenSubtype.Pathogen },
@@ -61,6 +61,7 @@ namespace MonsterCardPathogens
                                     new CharacterTriggerDataBuilder
                                     {
                                         Trigger = CustomTriggerBetterRally.OnCustomTriggerBetterRallyCharTrigger.GetEnum(),
+                                        Description = "Apply <nobr>[effect0.status0.count]</nobr> to all friendly units.",
                                         EffectBuilders = new List<CardEffectDataBuilder>
                                         {
                                             new CardEffectDataBuilder
@@ -104,7 +105,7 @@ namespace MonsterCardPathogens
                                                  new StatusEffectStackData
                                                  {
                                                       statusId = VanillaStatusEffectIDs.Regen,
-                                                      count = 2
+                                                      count = 1
                                                  }
                                             }
                                         },
