@@ -7,11 +7,11 @@ using static TargetHelper;
 
 namespace CustomEffectsPathogens
 {
-    //June 16, 2024 currently works but only counts first enemy unit? 
+    //June 17, 2024 it works yay!
     internal class CustomRoomStateAttackForContagion : RoomStateModifierBase, IRoomStateDamageModifier, IRoomStateModifier, ILocalizationParamInt, ILocalizationParameterContext
     {
         private int contagionPerDamagePoint;
-        protected SaveManager saveManager;
+        protected SaveManager saveManager;       
         private List<CharacterState> charsInTargetRoom = new List<CharacterState>();
         public int currentContagion;
         
@@ -45,20 +45,17 @@ namespace CustomEffectsPathogens
                 {
                     charsInTargetRoom.Clear();
                     ProviderManager.CombatManager.GetHeroManager().AddCharactersInRoomToList(charsInTargetRoom, roomOwner.GetRoomIndex());
-                    //roomOwner.AddCharactersToList(charsInTargetRoom, Team.Type.Heroes | Team.Type.Monsters);
-                    int num = 0;
-                    
+                    //roomOwner.AddCharactersToList(charsInTargetRoom, Team.Type.Heroes | Team.Type.Monsters);                    
+                    int num = 0;                    
                     {
-                        
                         foreach (CharacterState item in charsInTargetRoom)
-                        {
+                        {                            
                             int currentContagionStacks = item.GetStatusEffectStacks(StatusEffectContagion.statusID);
                             num += currentContagionStacks;
-                            return currentContagionStacks * contagionPerDamagePoint;                           
-                            
                         }
-                        
-                    }
+                        return num * contagionPerDamagePoint;
+                    }                   
+                    
                 }
             }
                 

@@ -10,6 +10,7 @@ using Trainworks.AssetConstructors;
 using ShinyShoe;
 using static UnityEngine.TouchScreenKeyboard;
 using Trainworks.Managers;
+using ShinyShoe.Logging;
 
 
 
@@ -69,7 +70,7 @@ namespace CustomEffectsPathogens
             return false;
         }
 
-        protected override IEnumerator OnTriggered(InputTriggerParams inputTriggerParams, OutputTriggerParams outputTriggerParams)
+        /*protected override IEnumerator OnTriggered(InputTriggerParams inputTriggerParams, OutputTriggerParams outputTriggerParams)
         {
             CoreSignals.DamageAppliedPlaySound.Dispatch(Damage.Type.DirectAttack);
             int numStacks = associatedCharacter.GetStatusEffectStacks(base.GetStatusId());
@@ -105,6 +106,47 @@ namespace CustomEffectsPathogens
                         {
                             characterState.AddStatusEffect(StatusEffectContagion.statusID, 1);
                         }
+                    }
+                };
+            }
+        }*/
+        protected override IEnumerator OnTriggered(InputTriggerParams inputTriggerParams, OutputTriggerParams outputTriggerParams)
+        {
+            if (associatedCharacter == null || associatedCharacter.IsDead)
+            {               
+                yield break;     
+               
+            }        
+
+            CoreSignals.DamageAppliedPlaySound.Dispatch(Damage.Type.DirectAttack);
+            int numStacks = associatedCharacter.GetStatusEffectStacks(GetStatusId());
+
+            if (numStacks >= associatedCharacter.GetHP() && combatManager != null)
+            {
+                yield return combatManager.ApplyDamageToTarget(GetDamageAmount(stacks), associatedCharacter, new CombatManager.ApplyDamageToTargetParameters
+                {
+                    
+                    damageType = Damage.Type.DirectAttack,
+                    vfxAtLoc = GetSourceStatusEffectData()?.GetOnAffectedVFX(),
+                    showDamageVfx = true,
+                    relicState = inputTriggerParams.suppressingRelic
+                });
+               
+            }
+
+            if (numStacks > 0)
+            {
+                List<CharacterState> list = new List<CharacterState>();
+                //ProviderManager.CombatManager.GetHeroManager().AddCharactersInRoomToList(list, roomManager.GetSelectedRoom());
+                //thanks Brandon for the help fixing the combat math issues!
+                //added in the below ? as identified by ThreeFishies and instructed by Brandon and now the Aerosolizer bug is gone!
+                RoomState roomState = associatedCharacter.GetSpawnPoint()?.GetRoomOwner();
+                if (roomState != null)
+                {                    
+                    roomState.AddCharactersToList(list, Team.Type.Heroes);
+                    foreach (CharacterState characterState in list)
+                    {                        
+                        characterState.AddStatusEffect(StatusEffectContagion.statusID, 1);
                     }
                 };
             }
