@@ -147,9 +147,10 @@ namespace Test_Bounce
                 //Patches
                 NoDoubleReplicate.JustDont();
 
-                //Custom Trait Tooltips
-                //Custom RoomModifier TooltipTitle
-            }
+            //Custom Trait Tooltips
+            //Custom RoomModifier TooltipTitle
+            BuilderUtils.ImportStandardLocalization(nameof(CustomRoomStateAttackForContagion), "Contagion Eater");
+        }
         private void Awake()
         {
             Rats.Instance = this;

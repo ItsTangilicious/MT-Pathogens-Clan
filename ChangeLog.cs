@@ -91,6 +91,29 @@ namespace Test_Bounce
          *Jun 12, 2024
          *Attempted fix for Aerosolizer
          *Recombinant Virus now targets back of room instead of front of room.
+         *
+         *June 15, 2024
+         *These are non-implemented ideas
+         *Flea → 4 to lowest health unit and then 4 to strongest unit.
+         *Network → only triggers off of non-morsels
+         *Spelleo → give permafrost?
+         *Using CardTraitDataBuilder {ParamTrackedValue = CardStatistics.TrackedValueType.StatusEffectCountInTargetRoom} to set the damage attack of a unit?
+         *Above for Roaming Macrophage - Quick. Action: -10 attack then gain attack equal to Contagion on the floor. (Infusion = quick). 0/10.
+         *Make the above a Harvest trigger but only for units with Contagion?
+         *
+         *June 16, 2024
+         *Antigen Mimic's ability reduced from "Culture: Restore 5 health to all friendly units and apply Regen 2." → "Culture: Restore 5 health to all friendly units and apply Regen 1."
+         *Antigen Mimic attack reduced from 20 → 10
+         *Spliced Monstrosity health incrased 10 → 20
+         *(failed)Attempted change to Mycorrhizial Network so Morsels do not trigger it off floor       
+         *
+         *June 17, 2024
+         *Changed Roaming Macrohpage ability from "Quick. Slay: +3 attack and health." → "Has Attack equal to the amount of Contagion on this floor."
+         *Roaming Macrophage infusion changed from "Quick and Slay: +2 attack" → "Has Attack equal to the amount of Contagion on this floor."
+         *Virodaemonologist health reduced 25 → 15
+         *Virodaemonologist ability reduced "Gain +5 attack and Armor 5." → "Gain +4 attack and Armor 3."
+         *Borrelia Daemonium cost reduced 2-ember → 1-ember and attack/health reduced 20/20 → 10/15
+         *Fixed Aerosilizer bug trying where it tried to kill a unit that was already dead and softlocking the game
          */
     }
 }
