@@ -19,7 +19,7 @@ namespace SpellCardPathogens
             {
                 CardID = ID,
                 Name = "Hurried Exit",
-                Description = "<b>Ascend</b> a unit and apply [sap]<b><nobr>[effect1.status0.power]</nobr></b>.",
+                Description = "<b>Ascend</b> a unit and apply [sap] <b><nobr>[effect1.status0.power]</nobr></b>.",
                 Cost = 2,
                 Rarity = CollectableRarity.Common,
                 TargetsRoom = true,
