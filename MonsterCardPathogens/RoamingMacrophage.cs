@@ -87,8 +87,8 @@ namespace MonsterCardPathogens
                                 {
                                     RoomModifierID = "_MacrophageRoom",
                                     RoomModifierClassType = typeof(CustomRoomStateAttackForContagion),                                    
-                                    Description = "Has [attack] equal to the amount of <b>Contagion</b> on this floor.",
-                                    DescriptionInPlay = "Has [attack] equal to the amount of <b>Contagion</b> on this floor.",
+                                    Description = "Has additional [attack] equal to the amount of <b>Contagion</b> on this floor.",
+                                    DescriptionInPlay = "Has additional [attack] equal to the amount of <b>Contagion</b> on this floor.",
                                     ParamInt = 1,
                                 }
                             },
@@ -96,7 +96,7 @@ namespace MonsterCardPathogens
                             {
                                 UpgradeID = "RoamingMacrophageSynthesis",
                                 //UpgradeDescription = "<b>Quick</b> and '<b>Slay:</b> +2[attack].'",
-                                UpgradeDescription = "Has [attack] equal to the amount of <b>Contagion</b> on this floor.",
+                                UpgradeDescription = "Has additional [attack] equal to the amount of <b>Contagion</b> on this floor.",
                                 HideUpgradeIconOnCard = true,
                                 UseUpgradeHighlightTextTags = true,
                                 BonusDamage = 0,
@@ -108,8 +108,8 @@ namespace MonsterCardPathogens
                                     {
                                     RoomModifierID = "_MacrophageSynthesisRoom",
                                     RoomModifierClassType = typeof(CustomRoomStateAttackForContagion),
-                                    Description = "Has [attack] equal to the amount of <b>Contagion</b> on this floor.",
-                                    DescriptionInPlay = "Has [attack] equal to the amount of <b>Contagion</b> on this floor.",
+                                    Description = "Has additional [attack] equal to the amount of <b>Contagion</b> on this floor.",
+                                    DescriptionInPlay = "Has additional [attack] equal to the amount of <b>Contagion</b> on this floor.",
                                     ParamInt = 1,
                                     }
                                 },

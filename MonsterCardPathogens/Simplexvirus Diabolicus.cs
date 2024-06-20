@@ -10,6 +10,7 @@ using Trainworks.BuildersV2;
 using Test_Bounce;
 using CustomEffectsPathogens;
 using Trainworks.Managers;
+using TCustomEffectsPathogens;
 
 
 
@@ -68,18 +69,14 @@ namespace MonsterCardPathogens
                                         Trigger = Trigger.PostCombat,
                                         Description = "Summon 1 Recombinant Virus.",
                                         EffectBuilders = new List<CardEffectDataBuilder>
-                                        {
-                                            /*new CardEffectDataBuilder
-                     {
-                         EffectStateType = typeof(CardEffectLoadRecombinantArt)
-                     */
+                                        {                                            
                                             new CardEffectDataBuilder
                                                 {
                                                      EffectStateType = typeof(CardEffectRecruitsShedding),
                                                      TargetMode = TargetMode.Room,
                                                      TargetTeamType = Team.Type.Monsters,
                                                      ParamCharacterData = CustomCharacterManager.GetCharacterDataByID(RecombinantVirusMonster.CharID),
-                                            }
+                                            },                                            
                                         }
                                     }
                                 }
@@ -87,46 +84,39 @@ namespace MonsterCardPathogens
                             },
                       // Note to self - this is follows SynthBuilder
                             TriggerBuilders =
-                            {
+                            {                                                               
                                 new CharacterTriggerDataBuilder
                                 {
-                                    TriggerID = TriggerID,
-                                    //Trigger = Trigger.OnHit,
-                                    //Description = "Gain <b>Shard [effect0.status0.power]</b>. Then lose <b>Shard [effect1.power]</b> to summon 1 Recombinant Virus.",
+                                    TriggerID = TriggerID,                                    
                                     Trigger = Trigger.PostCombat,
-                                    Description = "Summon 1 Recombinant Virus.",
+                                    Description = "Summon 1 Recombinant Virus and apply <b>Contagion <nobr>[effect1.status0.power]</nobr></b> to each unit with <b>Contagion</b>.",
                                     EffectBuilders =
-                                    {
-                                        /*new CardEffectDataBuilder
-                                        {
-                                            EffectStateType = typeof(CardEffectAddStatusEffect),
-                                            TargetMode = TargetMode.Self,
-                                            TargetTeamType = Team.Type.Monsters,
-                                            ParamStatusEffects =
-                                            {
-                                                 new StatusEffectStackData
-                                                 {
-                                                     statusId = VanillaStatusEffectIDs.Shard, 
-                                                     //statusId = StatusEffectSheddingDummyStacks.statusId,
-                                                      count = 1
-
-                                                 },
-
-                                            }
-                                        },*/
-                                        /*new CardEffectDataBuilder
-                     {
-                         EffectStateType = typeof(CardEffectLoadRecombinantArt)
-                     */
+                                    {                                       
                                         new CardEffectDataBuilder
-                                        {
-                                            //EffectStateType = typeof(CardEffectSheddingSpawn),
+                                        {                                            
                                             EffectStateType = typeof(CardEffectRecruitsShedding),
                                             TargetMode = TargetMode.Room,
-                                            TargetTeamType = Team.Type.Monsters,
-                                            //ParamInt = 2,
-                                            //ParamBool = true,
+                                            TargetTeamType = Team.Type.Monsters,                                            
                                             ParamCharacterData = CustomCharacterManager.GetCharacterDataByID(RecombinantVirusMonster.CharID),
+                                        },
+                                        new CardEffectDataBuilder
+                                        {
+                                                EffectStateType = typeof(CardEffectAddStatusEffect),
+                                                TargetMode = TargetMode.Room,
+                                                TargetTeamType = Team.Type.Heroes | Team.Type.Monsters,
+                                                ParamStatusEffects =
+                                                {
+                                                   new StatusEffectStackData
+                                                   {
+                                                       statusId = StatusEffectContagion.statusID,
+                                                       count = 6
+
+                                                   },
+                                                },
+                                                TargetModeStatusEffectsFilter = new string[]
+                                                {
+                                                    StatusEffectContagion.statusID
+                                                }
                                         }
 
                                     }

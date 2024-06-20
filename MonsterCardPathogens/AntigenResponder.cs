@@ -92,7 +92,7 @@ namespace MonsterCardPathogens
                                 {
                                     TriggerID = TriggerID,
                                     Trigger = CustomTriggerBetterRally.OnCustomTriggerBetterRallyCharTrigger.GetEnum(),
-                                    Description = "Restore [effect1.power] health to all friendly units and apply <nobr>[regen] [effect0.status0.power]</nobr>",
+                                    Description = "Restore [effect1.power] health to all friendly units and apply <nobr>[regen] [effect0.status0.power]</nobr>.",
                                     EffectBuilders =
                                     {
                                         new CardEffectDataBuilder
